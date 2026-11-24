@@ -27,3 +27,5 @@ Open ideas and follow-ups for this setup. Maintained together with Claude.
 - [ ] Revisit launcher after a Spotlight trial (Raycast was dropped for now).
 - [ ] Karabiner-Elements: Caps Lock → `⌃⌥` / Hyper, so AeroSpace bindings are one key.
 - [ ] SketchyBar, if the native menu bar isn't enough.
+- [ ] Workspace-switch animations: AeroSpace has none by design. Only option is yabai
+      (native Spaces, macOS slide animation) - needs partial SIP disable for full features.
