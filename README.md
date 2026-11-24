@@ -19,6 +19,7 @@ modules/home/
   dotfiles.nix            which config/ dirs get symlinked into ~/.config
 config/                   aerospace, ghostty, nvim, tmux
 scripts/                  fsearch + default.nix (installs them as commands)
+docs/keybindings.md       keybindings cheatsheet
 ```
 
 ## First-time setup
