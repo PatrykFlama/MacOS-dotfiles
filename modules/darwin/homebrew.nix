@@ -26,7 +26,7 @@
       # browsers
       "google-chrome"
       "librewolf"
-      "firefox"
+      # "firefox"
 
       # dev
       "visual-studio-code"
@@ -34,12 +34,11 @@
 
       # everyday
       "spotify"
-      "vesktop" # discord
-      "vlc"
-      "thunderbird"
-      "libreoffice"
+      "discord"
+      #"vlc"
+      #"thunderbird"
+      #"libreoffice"
 
-      # Uncomment when needed – kept out so the first install stays lean.
       # "sublime-text"
       # "krita"
       # "audacity"
