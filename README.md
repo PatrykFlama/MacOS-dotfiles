@@ -17,9 +17,8 @@ modules/home/
   shell.nix               zsh, aliases, prompt
   git.nix                 git + delta
   dotfiles.nix            which config/ dirs get symlinked into ~/.config
-  scripts.nix             scripts/ installed as commands
 config/                   aerospace, ghostty, nvim, tmux
-scripts/                  fsearch, mp4-to-gif
+scripts/                  fsearch + default.nix (installs them as commands)
 ```
 
 ## First-time setup

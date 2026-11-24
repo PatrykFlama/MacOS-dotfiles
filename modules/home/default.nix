@@ -5,7 +5,7 @@
     ./shell.nix
     ./git.nix
     ./dotfiles.nix
-    ./scripts.nix
+    ../../scripts
   ];
 
   home.username = user;
@@ -14,5 +14,5 @@
   xdg.enable = true;
 
   # Read the home-manager changelog before bumping this.
-  home.stateVersion = "25.11";
+  home.stateVersion = "26.05";
 }

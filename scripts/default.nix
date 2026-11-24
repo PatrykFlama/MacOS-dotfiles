@@ -1,4 +1,4 @@
-# Personal scripts from scripts/, installed as commands with their dependencies
+# Scripts in this folder, installed as commands with their dependencies
 # pinned (they work even if rg/fzf/ffmpeg aren't otherwise installed).
 { pkgs, ... }:
 {
@@ -10,7 +10,7 @@
         fzf
         bat
       ];
-      text = builtins.readFile ../../scripts/fsearch;
+      text = builtins.readFile ./fsearch;
     })
   ];
 }

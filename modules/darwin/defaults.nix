@@ -53,8 +53,8 @@
     };
 
     trackpad = {
-      Clicking = true; # tap to click
-      TrackpadThreeFingerDrag = true;
+      Clicking = false; # tap to click
+      TrackpadThreeFingerDrag = false;
     };
 
     screencapture = {
