@@ -12,10 +12,5 @@
       ];
       text = builtins.readFile ../../scripts/fsearch;
     })
-    (pkgs.writeShellApplication {
-      name = "mp4-to-gif";
-      runtimeInputs = [ pkgs.ffmpeg ];
-      text = builtins.readFile ../../scripts/mp4-to-gif;
-    })
   ];
 }
