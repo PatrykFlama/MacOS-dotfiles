@@ -8,7 +8,8 @@ window-padding-y = 14
 window-padding-balance = true
 macos-titlebar-style = tabs
 
-# Left Option acts as Alt (for tmux/zsh bindings); right Option still types
+# Left Option acts as Alt (e.g. zsh Alt-C); left-Option + AeroSpace keys are taken by
+# the window manager (Karabiner). Right Option still types
 # Polish characters (ą ę ś ł ż ź ć ń ó) with the Polish Pro layout.
 macos-option-as-alt = left
 

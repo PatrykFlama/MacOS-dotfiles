@@ -17,8 +17,8 @@ modules/home/
   shell.nix               zsh, aliases, prompt
   git.nix                 git + delta
   dotfiles.nix            which config/ dirs get symlinked into ~/.config
-config/                   aerospace, ghostty, nvim, tmux
-scripts/                  fsearch + default.nix (installs them as commands)
+config/                   aerospace, ghostty, karabiner, nvim, tmux
+scripts/                  fsearch, gen-karabiner.py + default.nix (installs commands)
 docs/keybindings.md       keybindings cheatsheet
 ```
 
@@ -35,4 +35,17 @@ docs/keybindings.md       keybindings cheatsheet
    ```sh
    sudo nix run nix-darwin/master#darwin-rebuild -- switch --flake ~/<pathto>/MacOS-dotfiles
    ```
-5. Log out and back in (some macOS defaults need it), then open **AeroSpace** once and grant Accessibility permission.
+5. Log out and back in (some macOS defaults need it), then:
+   - open **AeroSpace** once and grant Accessibility permission,
+   - open **Karabiner-Elements** once and approve what it asks for (driver/system extension,
+     Input Monitoring). It provides the left-Option window-manager key.
+
+## Window-manager key
+
+AeroSpace bindings are written as `ctrl-alt-*`; Karabiner maps **left Option** + those keys
+to ctrl+option, so in practice you press left ⌥. Right ⌥ keeps typing Polish letters.
+After adding/removing an AeroSpace binding, regenerate the Karabiner rule:
+
+```sh
+python3 scripts/gen-karabiner.py
+```

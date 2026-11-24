@@ -21,6 +21,7 @@
       # desktop / workflow
       "nikitabobko/tap/aerospace" # tiling window manager (Hyprland replacement)
       "ghostty" # terminal
+      "karabiner-elements" # left Option -> AeroSpace modifier (see config/karabiner)
 
       # browsers
       "google-chrome"
@@ -48,7 +49,6 @@
       # "raspberry-pi-imager"
       # "anydesk"
       # "ollama-app"
-      # "karabiner-elements" # e.g. Caps Lock -> Esc/Ctrl, or a Hyper key
       # "steam"
     ];
 

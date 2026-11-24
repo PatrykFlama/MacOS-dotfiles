@@ -9,6 +9,7 @@ in
   xdg.configFile = {
     "aerospace".source = link "aerospace";
     "ghostty".source = link "ghostty";
+    "karabiner".source = link "karabiner";
     "nvim".source = link "nvim";
     "tmux".source = link "tmux";
   };

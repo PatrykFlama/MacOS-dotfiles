@@ -1,9 +1,12 @@
 # AeroSpace – i3/Hyprland-style tiling for macOS.  Docs: https://nikitabobko.github.io/AeroSpace/guide
 #
-# Modifier is ctrl+alt (ctrl+option), NOT plain alt: with the Polish Pro layout,
-# option+letter types ą ę ś ł ż ź ć ń ó, so binding alt-l etc. would break typing.
-# Want a single "Super"-like key? Install Karabiner-Elements, map Caps Lock to
-# ctrl+option (or a Hyper key), and every binding below lands on one key.
+# Modifier: press LEFT Option. Karabiner (config/karabiner) turns left-Option + any
+# key bound here into ctrl+option + key, which is what these bindings listen for.
+# Right Option is untouched, so it types ą ę ś ł ż ź ć ń ó (Polish Pro) as usual.
+# Pressing real ctrl+option also works (e.g. if Karabiner isn't running).
+#
+# Adding/removing a binding? Regenerate the Karabiner key list (see README).
+# Left Option + arrows is deliberately NOT remapped (keeps word-jump in text).
 
 start-at-login = true
 

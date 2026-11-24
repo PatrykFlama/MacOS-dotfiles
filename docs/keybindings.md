@@ -2,32 +2,35 @@
 
 Symbols: `⌘` Cmd · `⌥` Option · `⌃` Ctrl · `⇧` Shift · `⌫` Backspace · `↵` Return
 
-> **Polish Pro layout:** `⌥ + letter` types ą ę ś ł ż ź ć ń ó, so nothing global is bound to plain `⌥`.
-> In Ghostty, **left ⌥ = Alt** (for tmux/zsh), **right ⌥** types Polish letters.
+> **Polish Pro layout:** `⌥ + letter` types ą ę ś ł ż ź ć ń ó. **Left ⌥** + window-manager keys belongs to AeroSpace;
+> **right ⌥** always types Polish letters. In Ghostty, other left-⌥ combos act as Alt.
 
 ---
 
-## Window manager – AeroSpace (`⌃⌥` = mod)
+## Window manager – AeroSpace (mod = **left** `⌥`)
+
+Left ⌥ is turned into `⌃⌥` by Karabiner for the keys below (real `⌃⌥` works too).
+Left ⌥ + arrows stays word-jump. Type **ł** with right ⌥ (left ⌥ L = focus right).
 
 | Keys | Action |
 | --- | --- |
-| `⌃⌥ ↵` | New terminal (Ghostty) |
-| `⌃⌥ F` | Finder (home folder) |
-| `⌃⌥⇧ F` | yazi in a new terminal |
-| `⌃⌥ Q` | Close window |
-| `⌃⌥ V` | Toggle floating / tiling |
-| `⌃⌥ M` | Fullscreen |
-| `⌃⌥ /` | Tiles layout (toggle horizontal / vertical) |
-| `⌃⌥ ,` | Accordion layout (toggle horizontal / vertical) |
-| `⌃⌥ H J K L` or arrows | Focus left / down / up / right |
-| `⌃⌥⇧ H J K L` or arrows | Move window |
-| `⌃⌥ -` / `⌃⌥ =` | Shrink / grow window |
-| `⌃⌥ 1 … 9, 0` | Go to workspace 1 … 10 |
-| `⌃⌥⇧ 1 … 9, 0` | Move window to workspace 1 … 10 |
-| `⌃⌥ Tab` | Previous workspace |
-| `⌃⌥⇧ Tab` | Move workspace to next monitor |
-| `⌃⌥ R` | Reload AeroSpace config |
-| `⌃⌥⇧ ;` | Enter **service mode** ↓ |
+| `⌥ ↵` | New terminal (Ghostty) |
+| `⌥ F` | Finder (home folder) |
+| `⌥⇧ F` | yazi in a new terminal |
+| `⌥ Q` | Close window |
+| `⌥ V` | Toggle floating / tiling |
+| `⌥ M` | Fullscreen |
+| `⌥ /` | Tiles layout (toggle horizontal / vertical) |
+| `⌥ ,` | Accordion layout (toggle horizontal / vertical) |
+| `⌥ H J K L` (or `⌃⌥` + arrows) | Focus left / down / up / right |
+| `⌥⇧ H J K L` (or `⌃⌥⇧` + arrows) | Move window |
+| `⌥ -` / `⌥ =` | Shrink / grow window |
+| `⌥ 1 … 9, 0` | Go to workspace 1 … 10 |
+| `⌥⇧ 1 … 9, 0` | Move window to workspace 1 … 10 |
+| `⌥ Tab` | Previous workspace |
+| `⌥⇧ Tab` | Move workspace to next monitor |
+| `⌥ R` | Reload AeroSpace config |
+| `⌥⇧ ;` | Enter **service mode** ↓ |
 
 **Service mode** (one key, then back to normal):
 
@@ -157,8 +160,6 @@ Files go to `~/Pictures/Screenshots`.
 | `⌃A` `d` | Detach |
 | `⌃A` `[` | Copy mode (`v` select, `⌃V` block, `y` yank to clipboard) |
 | `⌃A` `⌃A` | Send a literal `⌃A` |
-| `Alt h j k l` (left ⌥) | Focus pane, no prefix |
-| `Alt 1 … 9` (left ⌥) | Go to window, no prefix |
 | `⇧ ←` / `⇧ →` | Previous / next window |
 
 Mouse works (click panes, drag borders, scroll).
