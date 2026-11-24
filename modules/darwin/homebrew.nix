@@ -1,0 +1,60 @@
+# GUI apps come from Homebrew casks (signed, auto-updating, actually work on macOS),
+# but the list is declared here. CLI tools come from nixpkgs (see modules/home/packages.nix).
+{ ... }:
+{
+  homebrew = {
+    enable = true;
+
+    onActivation = {
+      autoUpdate = true;
+      upgrade = true;
+      # "none" leaves anything not listed here alone. Once you're happy with the
+      # list, switch to "zap" so Homebrew mirrors this file exactly.
+      cleanup = "none";
+    };
+
+    taps = [ "nikitabobko/tap" ];
+
+    brews = [ ];
+
+    casks = [
+      # desktop / workflow
+      "nikitabobko/tap/aerospace" # tiling window manager (Hyprland replacement)
+      "raycast" # launcher, clipboard history, emoji picker, calculator
+      "ghostty" # terminal
+
+      # browsers
+      "google-chrome"
+      "librewolf"
+      "firefox"
+
+      # dev
+      "visual-studio-code"
+      "claude-code"
+
+      # everyday
+      "spotify"
+      "vesktop" # discord
+      "vlc"
+      "thunderbird"
+      "libreoffice"
+
+      # Uncomment when needed – kept out so the first install stays lean.
+      # "sublime-text"
+      # "krita"
+      # "audacity"
+      # "kdenlive"
+      # "freecad"
+      # "ultimaker-cura"
+      # "arduino-ide"
+      # "raspberry-pi-imager"
+      # "anydesk"
+      # "ollama-app"
+      # "karabiner-elements" # e.g. Caps Lock -> Esc/Ctrl, or a Hyper key
+      # "steam"
+    ];
+
+    # Mac App Store apps: requires being signed in to the App Store.
+    # masApps = { "Xcode" = 497799835; };
+  };
+}

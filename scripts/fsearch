@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+# fsearch – fuzzy search file contents, preview the match with bat.
+#
+# Usage:
+#   fsearch [DEPTH] [fzf options...]
+#
+# Examples:
+#   fsearch          # whole tree
+#   fsearch 2        # current dir + one level down
+#   fsearch 3 -e     # extra args go to fzf
+set -euo pipefail
+
+depth_args=()
+if [[ $# -gt 0 && "$1" =~ ^[0-9]+$ ]]; then
+  depth_args=(--max-depth "$1")
+  shift
+fi
+
+rg \
+  --line-number \
+  --no-heading \
+  --color=always \
+  --smart-case \
+  --hidden \
+  --glob '!.git/' \
+  --glob '!node_modules/' \
+  --glob '!target/' \
+  --glob '!dist/' \
+  "${depth_args[@]}" \
+  '' . \
+| fzf \
+    --ansi \
+    -i \
+    --delimiter : \
+    --preview 'bat --style=numbers --color=always --highlight-line {2} {1}' \
+    --preview-window '~4,+{2}-5' \
+    "$@"

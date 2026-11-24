@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+if [[ $# -lt 1 ]]; then
+  echo "Usage: $(basename "$0") <input.mp4> [resolution]" >&2
+  echo "Example resolution format: 1280x720 or 720x-1" >&2
+  exit 1
+fi
+
+input_file="$1"
+output_file="${input_file%.*}.gif"
+resolution="${2:-}"
+
+filter_chain="fps=10"
+
+if [[ -n "$resolution" ]]; then
+  if [[ ! "$resolution" =~ ^(-1|[0-9]+)x(-1|[0-9]+)$ ]]; then
+    echo "Invalid resolution: $resolution" >&2
+    echo "Use format WIDTHxHEIGHT, for example 1280x720 or 720x-1" >&2
+    exit 1
+  fi
+  filter_chain+=",scale=${resolution/x/:}:flags=lanczos"
+fi
+
+filter_chain+=",split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse"
+
+ffmpeg -i "$input_file" \
+  -vf "$filter_chain" \
+  -loop 0 "$output_file"

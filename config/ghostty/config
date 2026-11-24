@@ -1,0 +1,40 @@
+# Ghostty config – reload with cmd+shift+, ; list options: `ghostty +show-config --default --docs`
+
+font-family = JetBrainsMono Nerd Font Mono
+font-size = 14
+
+window-padding-x = 14
+window-padding-y = 14
+window-padding-balance = true
+macos-titlebar-style = tabs
+
+# Left Option acts as Alt (for tmux/zsh bindings); right Option still types
+# Polish characters (ą ę ś ł ż ź ć ń ó) with the Polish Pro layout.
+macos-option-as-alt = left
+
+copy-on-select = clipboard
+mouse-hide-while-typing = true
+shell-integration-features = cursor,sudo,title
+
+# Tokyo Night Moon (same palette as the tmux theme)
+background = #222436
+foreground = #c8d3f5
+cursor-color = #c8d3f5
+selection-background = #2d3f76
+selection-foreground = #c8d3f5
+palette = 0=#1b1d2b
+palette = 1=#ff757f
+palette = 2=#c3e88d
+palette = 3=#ffc777
+palette = 4=#82aaff
+palette = 5=#c099ff
+palette = 6=#86e1fc
+palette = 7=#828bb8
+palette = 8=#444a73
+palette = 9=#ff757f
+palette = 10=#c3e88d
+palette = 11=#ffc777
+palette = 12=#82aaff
+palette = 13=#c099ff
+palette = 14=#86e1fc
+palette = 15=#c8d3f5
