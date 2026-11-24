@@ -13,6 +13,17 @@
       share = true;
     };
 
+    # Note: with xdg.enable, home-manager keeps zsh files in ~/.config/zsh
+    # (ZDOTDIR), so ~/.zprofile / ~/.zshrc in $HOME are no longer read.
+    profileExtra = ''
+      # Homebrew (casks + anything brew-only, e.g. claude). `brew shellenv`
+      # prepends its dirs; move them after Nix so Nix-managed tools win.
+      if [[ -x /opt/homebrew/bin/brew ]]; then
+        eval "$(/opt/homebrew/bin/brew shellenv zsh)"
+        path=(''${path:#/opt/homebrew/*} /opt/homebrew/bin /opt/homebrew/sbin)
+      fi
+    '';
+
     shellAliases = {
       # eza's module already provides ls/ll/la/lt; these are the extras.
       l = "eza -l";

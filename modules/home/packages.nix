@@ -14,6 +14,7 @@
 
     # system / fun
     btop
+    tmux # config is symlinked from config/tmux (no programs.tmux: it would write its own tmux.conf)
     fastfetch
 
     # media
@@ -47,12 +48,14 @@
     nix-direnv.enable = true;
   };
   programs.gh.enable = true;
-  programs.tmux.enable = true; # config itself is symlinked from config/tmux
   programs.neovim = {
     enable = true;
     defaultEditor = true;
     viAlias = true;
     vimAlias = true;
+    # Pass home-manager's generated lua via a wrapper flag instead of writing
+    # ~/.config/nvim/init.lua, which is ours (symlinked from config/nvim).
+    sideloadInitLua = true;
     plugins = [ pkgs.vimPlugins.nvim-treesitter.withAllGrammars ];
   };
 }
