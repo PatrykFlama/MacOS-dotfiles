@@ -50,6 +50,9 @@
       FXEnableExtensionChangeWarning = false;
       _FXSortFoldersFirst = true;
       NewWindowTarget = "Home";
+      # Allow ⌘Q on Finder, so it doesn't sit in the Dock as "running" forever.
+      # While quit, desktop icons are hidden; clicking Finder in the Dock relaunches it.
+      QuitMenuItem = true;
     };
 
     trackpad = {

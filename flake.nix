@@ -30,7 +30,7 @@
           system ? "aarch64-darwin",
           # Absolute path of this repo on that machine; config/ is symlinked from here
           # so edits to dotfiles apply instantly, without a rebuild.
-          dotfilesDir ? "/Users/${user}/Documents/MacOS-dotfiles",
+          dotfilesDir ? "/Users/${user}/workplace/MacOS-dotfiles",
         }:
         nix-darwin.lib.darwinSystem {
           specialArgs = { inherit hostname user dotfilesDir; };

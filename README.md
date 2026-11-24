@@ -30,9 +30,9 @@ docs/keybindings.md       keybindings cheatsheet
    curl -fsSL https://install.determinate.systems/nix | sh -s -- install
    ```
    Open a new terminal afterwards.
-3. Clone this repo to `~/Documents/MacOS-dotfiles` (or change `dotfilesDir` in `flake.nix`).
+3. Clone this repo to `~/<pathto>/MacOS-dotfiles` (or change `dotfilesDir` in `flake.nix`).
 4. First build (installs `darwin-rebuild`):
    ```sh
-   sudo nix run nix-darwin/master#darwin-rebuild -- switch --flake ~/Documents/MacOS-dotfiles
+   sudo nix run nix-darwin/master#darwin-rebuild -- switch --flake ~/<pathto>/MacOS-dotfiles
    ```
 5. Log out and back in (some macOS defaults need it), then open **AeroSpace** once and grant Accessibility permission.
