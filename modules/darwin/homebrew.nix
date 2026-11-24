@@ -20,7 +20,6 @@
     casks = [
       # desktop / workflow
       "nikitabobko/tap/aerospace" # tiling window manager (Hyprland replacement)
-      "raycast" # launcher, clipboard history, emoji picker, calculator
       "ghostty" # terminal
 
       # browsers

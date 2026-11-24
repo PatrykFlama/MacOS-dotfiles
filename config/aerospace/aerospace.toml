@@ -32,7 +32,7 @@ outer.bottom = 8
 ctrl-alt-enter = 'exec-and-forget open -na Ghostty'
 ctrl-alt-f = 'exec-and-forget open ~'
 ctrl-alt-shift-f = 'exec-and-forget open -na Ghostty --args -e zsh -lic yazi'
-# Launcher (Raycast), screenshots (cmd+shift+4/5) and lock (ctrl+cmd+q) are macOS-native.
+# Launcher (Spotlight, cmd+space), screenshots (cmd+shift+4/5) and lock (ctrl+cmd+q) are macOS-native.
 
 # --- windows ---
 ctrl-alt-q = 'close'
