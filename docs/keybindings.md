@@ -57,7 +57,7 @@ Mouse: hold `⌃⌘` and drag anywhere on a window to move it.
 
 | Keys | Action |
 | --- | --- |
-| `⌘ Space` | Spotlight (launch apps, calculator, search) |
+| `⌘ Space` or left `⌥ Space` | Spotlight (launch apps, calculator, search) |
 | `⌘ Tab` / `⌘ ⇧ Tab` | Switch **apps** |
 | `` ⌘ ` `` | Cycle windows of the current app |
 | `⌘ W` | Close window / tab |
