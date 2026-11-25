@@ -9,6 +9,7 @@
     ./defaults.nix
     ./homebrew.nix
     ./launcher.nix
+    ./keymap.nix
     ./wm
   ];
 

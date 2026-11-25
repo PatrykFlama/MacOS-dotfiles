@@ -147,6 +147,14 @@ Built in: calculator & unit/currency conversion, Clipboard History, Snippets, Em
 
 ---
 
+## Browsers (Chrome, LibreWolf – `modules/darwin/keymap.nix`)
+
+| Keys | Action |
+| --- | --- |
+| `⌘ H` | **History** (instead of hiding the app; macOS default would be `⌘Y` / `⌘⇧H`) |
+
+---
+
 ## Ghostty (terminal)
 
 | Keys | Action |

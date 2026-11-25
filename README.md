@@ -18,6 +18,7 @@ modules/home/
   git.nix                 git + delta
   dotfiles.nix            which config/ dirs get symlinked into ~/.config
   launcher.nix            ⌘Space launcher: Raycast or Spotlight
+  keymap.nix              our keymap: per-app menu shortcuts (e.g. ⌘H = History in browsers)
   wm/                     window managers: default.nix (choice) + aerospace.nix
 modules/home/karabiner.nix  generates ~/.config/karabiner/karabiner.json on drs
 config/                   aerospace, ghostty, nvim, swiftbar, swipeaerospace, tmux
