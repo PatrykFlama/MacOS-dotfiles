@@ -63,6 +63,26 @@ rules.append({
     }],
 })
 
+# --- Always: screenshots (Hyprland's Super+S / Super+Shift+S). Left ⌥ only – right ⌥S
+# types ś. Both just press macOS's own screenshot keys (no extra permissions):
+#   left ⌥S  -> ⌃⌘⇧4: select an area -> clipboard
+#   left ⌥⇧S -> ⌘⇧4:  select an area -> floating thumbnail; click it to edit (crop,
+#                     annotate), or let it save to ~/Pictures/Screenshots
+def press(key, mods):
+    return [{"key_code": key, "modifiers": mods}]
+
+rules.append({
+    "description": "Left Option + S screenshots (area -> clipboard; with Shift -> editable)",
+    "manipulators": [
+        {"type": "basic",
+         "from": {"key_code": "s", "modifiers": {"mandatory": ["left_option"]}},
+         "to": press("4", ["left_control", "left_command", "left_shift"])},
+        {"type": "basic",
+         "from": {"key_code": "s", "modifiers": {"mandatory": ["left_option", "shift"]}},
+         "to": press("4", ["left_command", "left_shift"])},
+    ],
+})
+
 # --- ISO keyboards: the key between left Shift and Z becomes a second left Shift
 # (ISO's left Shift is short). On Apple ISO keyboards that key reports
 # grave_accent_and_tilde (checked in Karabiner-EventViewer); the top-left key

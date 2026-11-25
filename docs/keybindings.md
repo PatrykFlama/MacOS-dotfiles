@@ -89,11 +89,11 @@ list of workspaces with their apps; click one to switch.
 
 | Keys | Action |
 | --- | --- |
+| left `⌥ S` | **Select area → clipboard** (paste anywhere) |
+| left `⌥⇧ S` | **Select area → editable**: click the thumbnail to crop / annotate, or let it save to a file |
+| `Space` (while selecting) | Pick a whole window instead of an area |
+| `⌘ ⇧ 5` | Toolbar: whole screen, window, **screen recording**, timer |
 | `⌘ ⇧ 3` | Whole screen → file |
-| `⌘ ⇧ 4` | Select area → file |
-| `⌘ ⇧ 4`, then `Space` | Pick a window → file |
-| `⌘ ⇧ 5` | Screenshot / screen recording toolbar |
-| add `⌃` to any of the above | → clipboard instead of file |
 
 Files go to `~/Pictures/Screenshots`.
 

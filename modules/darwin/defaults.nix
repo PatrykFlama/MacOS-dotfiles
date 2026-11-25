@@ -58,6 +58,8 @@
       location = "/Users/${user}/Pictures/Screenshots";
       type = "png";
       disable-shadow = true;
+      # Floating thumbnail after a screenshot: click it to edit (left ⌥⇧S relies on it).
+      show-thumbnail = true;
     };
 
     loginwindow.GuestEnabled = false;

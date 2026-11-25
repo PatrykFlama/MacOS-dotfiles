@@ -15,9 +15,6 @@ Open ideas and follow-ups for this setup. Maintained together with Claude.
       Only affects native Cocoa apps; browsers/Electron handle these keys themselves.
 - [ ] Update `docs/keybindings.md` once the two items above are done.
 
-- [ ] **Screenshot shortcuts** (`⌘⇧3/4/5`, clipboard variants with `⌃`) – remap to
-      something sensible. They're system symbolic hotkeys (not menu items), so they go in
-      the config like the Spotlight shortcut (`-dict-add` in postActivation), not keymap.nix.
 
 ## Homebrew
 
