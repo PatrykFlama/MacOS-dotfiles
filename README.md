@@ -18,7 +18,7 @@ modules/home/
   git.nix                 git + delta
   dotfiles.nix            which config/ dirs get symlinked into ~/.config
 config/                   aerospace, ghostty, karabiner, nvim, swiftbar, swipeaerospace, tmux
-scripts/                  fsearch, tiling-toggle, gen-karabiner.py + default.nix
+scripts/                  fsearch, ghostty-window, tiling-toggle, gen-karabiner.py + default.nix
 docs/keybindings.md       keybindings cheatsheet
 ```
 

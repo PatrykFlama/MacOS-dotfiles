@@ -1,0 +1,60 @@
+#!/usr/bin/env bash
+# ghostty-window – open a new window in the RUNNING Ghostty (via its AppleScript API)
+# instead of `open -na Ghostty`, which starts a whole new Ghostty process per window.
+#
+# Usage: ghostty-window [--float] [--title TITLE] [COMMAND]
+#   COMMAND  shell command to run instead of the default shell (run via /bin/sh)
+#   --float  make the window floating in AeroSpace (e.g. the keybindings cheatsheet)
+#   --title  fixed window/tab title
+set -euo pipefail
+
+float=0
+title=""
+while [[ $# -gt 0 ]]; do
+  case $1 in
+    --float) float=1; shift ;;
+    --title) title=$2; shift 2 ;;
+    --) shift; break ;;
+    *) break ;;
+  esac
+done
+cmd=${1:-}
+
+ghostty_id=com.mitchellh.ghostty
+
+if [[ $(/usr/bin/osascript -e "application id \"$ghostty_id\" is running") == true ]]; then
+  /usr/bin/osascript - "$cmd" "$title" <<'APPLESCRIPT' >/dev/null
+on run argv
+  set cmd to item 1 of argv
+  set winTitle to item 2 of argv
+  tell application id "com.mitchellh.ghostty"
+    if cmd is "" then
+      set w to new window
+    else
+      set cfg to new surface configuration
+      set command of cfg to cmd
+      set w to new window with configuration cfg
+    end if
+    if winTitle is not "" then set name override of selected tab of w to winTitle
+    activate
+  end tell
+end run
+APPLESCRIPT
+else
+  # Not running yet: the first launch opens a window by itself.
+  args=()
+  [[ -n $title ]] && args+=("--title=$title")
+  [[ -n $cmd ]] && args+=(-e /bin/sh -c "$cmd")
+  if [[ ${#args[@]} -gt 0 ]]; then
+    open -a Ghostty --args "${args[@]}"
+  else
+    open -a Ghostty
+  fi
+fi
+
+if [[ $float == 1 ]]; then
+  # Give the window a moment to appear and take focus, then float it (no-op while
+  # tiling is toggled off).
+  sleep 0.4
+  /opt/homebrew/bin/aerospace layout floating >/dev/null 2>&1 || true
+fi

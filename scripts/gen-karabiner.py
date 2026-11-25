@@ -48,6 +48,10 @@ extra_rules.insert(0, {
 
 # Launchers + tiling toggle. These live in Karabiner (not AeroSpace) so they keep
 # working while tiling is switched off. Commands run via /bin/sh.
+# Our scripts (scripts/default.nix) are installed into the per-user Nix profile.
+# Terminals open via ghostty-window (new window in the running Ghostty, not a new
+# Ghostty process per window like `open -na Ghostty`).
+BIN = "/etc/profiles/per-user/$USER/bin"
 def launcher(key, shift, cmd):
     mods = ["left_option"] + (["shift"] if shift else [])
     return {"type": "basic",
@@ -57,12 +61,12 @@ def launcher(key, shift, cmd):
 extra_rules.insert(0, {
     "description": "Left Option launchers (terminal, Finder, yazi, cheatsheet, tiling toggle)",
     "manipulators": [
-        launcher("return_or_enter", False, "open -na Ghostty"),
+        launcher("return_or_enter", False, f"{BIN}/ghostty-window"),
         launcher("f", False, "open ~"),
-        launcher("f", True, "open -na Ghostty --args -e zsh -lic yazi"),
-        launcher("slash", True, "open -na Ghostty --args --title=Keybindings -e zsh -lic "
-                                "'glow -p \"$DOTFILES/docs/keybindings.md\"'"),
-        launcher("t", True, "/etc/profiles/per-user/$USER/bin/tiling-toggle"),
+        launcher("f", True, f"{BIN}/ghostty-window 'zsh -lic yazi'"),
+        launcher("slash", True, f"{BIN}/ghostty-window --float --title Keybindings "
+                                "\"zsh -lic 'glow -p \\\"\\$DOTFILES/docs/keybindings.md\\\"'\""),
+        launcher("t", True, f"{BIN}/tiling-toggle"),
     ],
 })
 rules = [{

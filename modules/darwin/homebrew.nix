@@ -6,8 +6,10 @@
     enable = true;
 
     onActivation = {
-      autoUpdate = true;
-      upgrade = true;
+      # Don't update/upgrade on every rebuild (slow, needs network, and upgrades apps in
+      # the middle of unrelated config changes). `dup` does it explicitly.
+      autoUpdate = false;
+      upgrade = false;
       # "none" leaves anything not listed here alone. Once you're happy with the
       # list, switch to "zap" so Homebrew mirrors this file exactly.
       cleanup = "none";

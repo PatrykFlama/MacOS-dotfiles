@@ -36,8 +36,9 @@
       # Apply the config. Same muscle memory as `nrs` on NixOS.
       drs = "sudo darwin-rebuild switch --flake ${dotfilesDir}";
       nrs = "drs";
-      # Bump flake inputs (nixpkgs, nix-darwin, home-manager), then rebuild.
-      dup = "nix flake update --flake ${dotfilesDir} && drs";
+      # Update everything: flake inputs (nixpkgs, nix-darwin, home-manager), Homebrew
+      # apps, then rebuild.
+      dup = "nix flake update --flake ${dotfilesDir} && brew update && brew upgrade && drs";
     };
 
     initContent = ''

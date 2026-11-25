@@ -8,9 +8,12 @@
 #               3-finger gestures (Spaces swipe, Mission Control) come back.
 #   tiling on:  the reverse – borders + indicator back, 3-finger swipes go to SwipeAeroSpace.
 #
-# Note: `drs` re-applies the config defaults (3-finger gestures off), so rebuild while
-# tiling is on, or toggle twice afterwards.
+# Note: `drs` restores the tiling-mode setup (3-finger gestures off, borders on) but
+# can't re-enable AeroSpace itself, so rebuild while tiling is on – or press ⌥⇧T twice
+# afterwards to get back to a consistent state.
 set -euo pipefail
+
+notify() { /usr/bin/osascript -e "display notification \"$1\" with title \"AeroSpace\""; }
 
 aerospace=/opt/homebrew/bin/aerospace
 swipe_app=club.mediosz.SwipeAeroSpace
@@ -30,6 +33,11 @@ set_native_three_finger_gestures() {
   /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
 }
 
+if ! pgrep -xq AeroSpace; then
+  notify "AeroSpace is not running – start it first"
+  exit 1
+fi
+
 if "$aerospace" enable off --fail-if-noop >/dev/null 2>&1; then
   state=off
   /usr/bin/osascript -e "tell application id \"$swipe_app\" to quit" >/dev/null 2>&1 || true
@@ -45,4 +53,4 @@ else
   open -g "swiftbar://enableplugin?name=aerospace" >/dev/null 2>&1 || true
 fi
 
-/usr/bin/osascript -e "display notification \"Tiling: ${state}\" with title \"AeroSpace\""
+notify "Tiling: ${state}"

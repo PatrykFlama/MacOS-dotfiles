@@ -13,6 +13,10 @@
       text = builtins.readFile ./fsearch;
     })
     (pkgs.writeShellApplication {
+      name = "ghostty-window";
+      text = builtins.readFile ./ghostty-window;
+    })
+    (pkgs.writeShellApplication {
       name = "tiling-toggle";
       text = builtins.readFile ./tiling-toggle;
     })

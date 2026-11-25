@@ -18,7 +18,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "open -na Ghostty"
+                                        "shell_command": "/etc/profiles/per-user/$USER/bin/ghostty-window"
                                     }
                                 ]
                             },
@@ -51,7 +51,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "open -na Ghostty --args -e zsh -lic yazi"
+                                        "shell_command": "/etc/profiles/per-user/$USER/bin/ghostty-window 'zsh -lic yazi'"
                                     }
                                 ]
                             },
@@ -68,7 +68,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "open -na Ghostty --args --title=Keybindings -e zsh -lic 'glow -p \"$DOTFILES/docs/keybindings.md\"'"
+                                        "shell_command": "/etc/profiles/per-user/$USER/bin/ghostty-window --float --title Keybindings \"zsh -lic 'glow -p \\\"\\$DOTFILES/docs/keybindings.md\\\"'\""
                                     }
                                 ]
                             },

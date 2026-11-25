@@ -167,7 +167,7 @@ Files go to `~/Pictures/Screenshots`.
 | `fsearch [depth]` | Fuzzy search file contents |
 | `ff` | Fuzzy pick a file with preview |
 | ` command` (leading space) | Not saved to history |
-| `drs` / `dup` | Apply config / update inputs + apply |
+| `drs` / `dup` | Apply config / update everything (Nix inputs + Homebrew apps) and apply |
 
 ---
 
