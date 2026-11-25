@@ -22,6 +22,10 @@ accordion-padding = 30
 
 on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 
+# Refresh the SwiftBar workspace indicator (config/swiftbar) on every switch / focus change.
+exec-on-workspace-change = ['/bin/bash', '-c', 'open -g "swiftbar://refreshplugin?name=aerospace"']
+on-focus-changed = ['exec-and-forget open -g "swiftbar://refreshplugin?name=aerospace"']
+
 [key-mapping]
 preset = 'qwerty'
 

@@ -56,6 +56,9 @@ Left ⌥ + arrows stays word-jump. Type **ł** with right ⌥ (left ⌥ L = focu
 
 Mouse: hold `⌃⌘` and drag anywhere on a window to move it.
 
+**Menu bar** (SwiftBar): `1  [2]  4` = workspaces with windows, `[ ]` = current. Click for a
+list of workspaces with their apps; click one to switch.
+
 **Trackpad** (SwipeAeroSpace):
 
 | Gesture | Action |

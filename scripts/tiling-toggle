@@ -3,9 +3,10 @@
 # Bound to left ⌥⇧T via Karabiner, since a disabled AeroSpace ignores all its own keys.
 #
 #   tiling off: AeroSpace stops managing windows, SwipeAeroSpace quits, window borders
-#               (JankyBorders) stop – they glitch in Mission Control – and the macOS
+#               (JankyBorders) stop – they glitch in Mission Control –, the SwiftBar
+#               workspace indicator hides, and the macOS
 #               3-finger gestures (Spaces swipe, Mission Control) come back.
-#   tiling on:  the reverse – borders back, 3-finger swipes go to SwipeAeroSpace again.
+#   tiling on:  the reverse – borders + indicator back, 3-finger swipes go to SwipeAeroSpace.
 #
 # Note: `drs` re-applies the config defaults (3-finger gestures off), so rebuild while
 # tiling is on, or toggle twice afterwards.
@@ -33,6 +34,7 @@ if "$aerospace" enable off --fail-if-noop >/dev/null 2>&1; then
   state=off
   /usr/bin/osascript -e "tell application id \"$swipe_app\" to quit" >/dev/null 2>&1 || true
   launchctl bootout "$borders_agent" >/dev/null 2>&1 || true
+  open -g "swiftbar://disableplugin?name=aerospace" >/dev/null 2>&1 || true
   set_native_three_finger_gestures 2
 else
   "$aerospace" enable on
@@ -40,6 +42,7 @@ else
   set_native_three_finger_gestures 0
   launchctl bootstrap "gui/$(id -u)" "$borders_plist" >/dev/null 2>&1 || true
   open -g -b "$swipe_app"
+  open -g "swiftbar://enableplugin?name=aerospace" >/dev/null 2>&1 || true
 fi
 
 /usr/bin/osascript -e "display notification \"Tiling: ${state}\" with title \"AeroSpace\""

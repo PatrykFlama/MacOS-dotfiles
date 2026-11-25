@@ -1,6 +1,6 @@
 # macOS preferences (the `defaults write` stuff), applied on every rebuild.
 # Some settings only take effect after logging out and back in.
-{ user, ... }:
+{ user, dotfilesDir, ... }:
 {
   system.defaults = {
     NSGlobalDomain = {
@@ -71,6 +71,10 @@
     };
 
     loginwindow.GuestEnabled = false;
+
+    # SwiftBar: load plugins (workspace indicator) straight from the repo.
+    # Undocumented key; if SwiftBar still asks for a folder, pick config/swiftbar.
+    CustomUserPreferences."com.ameba.SwiftBar".PluginDirectory = "${dotfilesDir}/config/swiftbar";
   };
 
   # screencapture.location must exist.

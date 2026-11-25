@@ -17,7 +17,7 @@ modules/home/
   shell.nix               zsh, aliases, prompt
   git.nix                 git + delta
   dotfiles.nix            which config/ dirs get symlinked into ~/.config
-config/                   aerospace, ghostty, karabiner, nvim, swipeaerospace, tmux
+config/                   aerospace, ghostty, karabiner, nvim, swiftbar, swipeaerospace, tmux
 scripts/                  fsearch, tiling-toggle, gen-karabiner.py + default.nix
 docs/keybindings.md       keybindings cheatsheet
 ```
@@ -40,6 +40,9 @@ docs/keybindings.md       keybindings cheatsheet
    - open **Karabiner-Elements** once and approve what it asks for (driver/system extension,
      Input Monitoring). It provides the left-Option window-manager key.
    - open **SwipeAeroSpace** once and grant Accessibility permission (trackpad gestures).
+   - open **SwiftBar** once (menu-bar workspace indicator); if it asks for a plugin folder,
+     choose `config/swiftbar` in this repo. Optionally hide AeroSpace's own menu-bar icon in
+     *System Settings → Menu Bar*.
 
 ## Window-manager key
 

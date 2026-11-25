@@ -26,6 +26,7 @@
       "ghostty" # terminal
       "karabiner-elements" # left Option -> AeroSpace modifier (see config/karabiner)
       "mediosz/tap/swipeaerospace" # 3-finger swipe -> AeroSpace workspaces (see config/swipeaerospace)
+      "swiftbar" # menu-bar workspace indicator (see config/swiftbar)
 
       # browsers
       "google-chrome"
