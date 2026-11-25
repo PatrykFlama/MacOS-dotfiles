@@ -34,6 +34,13 @@ Open ideas and follow-ups for this setup. Maintained together with Claude.
       workspace instead of stopping. Fallbacks: `skip-empty = false` (swipes through all
       10 numbered workspaces) or BetterTouchTool + script (paid).
 
+- [ ] Hyprland-style dwindle (each new window splits the focused one). AeroSpace has no
+      such layout (only tiles/accordion); watch upstream issue #260
+      (github.com/nikitabobko/AeroSpace/issues/260, "more sophisticated normalizations",
+      mentions bsp). Interim options: a script on new windows that runs `join-with`
+      (imitation; may flicker / guess direction wrong), or bind `join-with` to keys and
+      split manually. Real dwindle elsewhere = yabai bsp (we decided against yabai).
+
 ## Later / maybe
 
 - [ ] Revisit launcher after a Spotlight trial (Raycast was dropped for now).

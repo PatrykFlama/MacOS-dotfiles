@@ -40,8 +40,7 @@ Left ⌥ + arrows stays word-jump. Type **ł** with right ⌥ (left ⌥ L = focu
 | `⌥ -` / `⌥ =` | Shrink / grow window |
 | `⌥ 1 … 9, 0` | Go to workspace 1 … 10 |
 | `⌥⇧ 1 … 9, 0` | Move window to workspace 1 … 10 and follow it |
-| `⌥ Tab` | Previous workspace |
-| `⌥⇧ Tab` | Move workspace to next monitor |
+| `⌥ Tab` / `⌥⇧ Tab` | Next / previous workspace (only ones with windows, wraps around) |
 | `⌥ R` | Reload AeroSpace config |
 | `⌥⇧ ;` | Enter **service mode** ↓ |
 

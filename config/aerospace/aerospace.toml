@@ -93,8 +93,9 @@ ctrl-alt-shift-8 = 'move-node-to-workspace --focus-follows-window 8'
 ctrl-alt-shift-9 = 'move-node-to-workspace --focus-follows-window 9'
 ctrl-alt-shift-0 = 'move-node-to-workspace --focus-follows-window 10'
 
-ctrl-alt-tab = 'workspace-back-and-forth'
-ctrl-alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
+# Cycle through workspaces that have windows (+ the current one), wrapping around.
+ctrl-alt-tab = 'exec-and-forget { /opt/homebrew/bin/aerospace list-workspaces --monitor focused --empty no; /opt/homebrew/bin/aerospace list-workspaces --focused; } | sort -un | /opt/homebrew/bin/aerospace workspace --stdin --wrap-around next'
+ctrl-alt-shift-tab = 'exec-and-forget { /opt/homebrew/bin/aerospace list-workspaces --monitor focused --empty no; /opt/homebrew/bin/aerospace list-workspaces --focused; } | sort -un | /opt/homebrew/bin/aerospace workspace --stdin --wrap-around prev'
 
 ctrl-alt-r = 'reload-config'
 ctrl-alt-shift-semicolon = 'mode service'
