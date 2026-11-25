@@ -80,11 +80,5 @@
   system.activationScripts.postActivation.text = ''
     # screencapture.location must exist.
     sudo -u ${user} mkdir -p /Users/${user}/Pictures/Screenshots
-
-    # Free ⌘Space for Raycast: disable Spotlight's "Show Spotlight search" shortcut (id 64).
-    # `-dict-add` merges this one entry, so other shortcuts changed in System Settings stay.
-    sudo -u ${user} defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 64 \
-      '<dict><key>enabled</key><false/><key>value</key><dict><key>parameters</key><array><integer>32</integer><integer>49</integer><integer>1048576</integer></array><key>type</key><string>standard</string></dict></dict>'
-    sudo -u ${user} /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
   '';
 }

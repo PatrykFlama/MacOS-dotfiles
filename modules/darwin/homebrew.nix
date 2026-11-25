@@ -29,7 +29,7 @@
       "karabiner-elements" # left Option -> AeroSpace modifier (see config/karabiner)
       "mediosz/tap/swipeaerospace" # 3-finger swipe -> AeroSpace workspaces (see config/swipeaerospace)
       "swiftbar" # menu-bar workspace indicator (see config/swiftbar)
-      "raycast" # launcher (replaces Spotlight on ⌘Space): clipboard history, new app window…
+      # (Raycast is added by launcher.nix when launcher = "raycast")
 
       # browsers
       "google-chrome"

@@ -43,8 +43,9 @@ docs/keybindings.md       keybindings cheatsheet
    - open **SwiftBar** once (menu-bar workspace indicator); if it asks for a plugin folder,
      choose `config/swiftbar` in this repo. Optionally hide AeroSpace's own menu-bar icon in
      *System Settings → Menu Bar*.
-   - open **Raycast** and set its hotkey to `⌘Space` (left `⌥Space` follows). Spotlight's
-     `⌘Space` shortcut is already switched off by the config.
+   - launcher (`launcher` in `flake.nix`, default `"raycast"`): open **Raycast** once and set
+     its hotkey to `⌘Space` (left `⌥Space` follows); the config switches Spotlight's
+     shortcut off. With `launcher = "spotlight"` Spotlight keeps `⌘Space` and Raycast quits.
 
 ## Window-manager key
 

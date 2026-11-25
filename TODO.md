@@ -42,12 +42,13 @@ Open ideas and follow-ups for this setup. Maintained together with Claude.
 
 ## Later / maybe
 
-- [ ] Check Raycast's `⌃↵` (New Application Window) with AeroSpace: does the new window
-      land on the current workspace, or does AeroSpace first jump to the app's existing
-      workspace? If it jumps, add an AeroSpace rule/script to pull the new window back.
-- [ ] Raycast `↵` on a running app only focuses it ("Open" is the fixed primary action;
-      "New Application Window" is `⌃↵`, not remappable). Possible AeroSpace-side idea
-      later; a Karabiner ↵/⌃↵ swap inside Raycast was rejected (breaks all other items).
+- [ ] "New window here" for already-running apps (Raycast/Spotlight just focus them, and
+      Raycast 2.13 has no "New Application Window" action despite the manual). Plan: a
+      `new-window <app>` script – Chrome-family `open -na … --args --new-window`,
+      LibreWolf/Firefox equivalent (test), Ghostty `ghostty-window`, VS Code `code -n`,
+      Finder AppleScript, fallback: focus app + ⌘N, then move the new window back to the
+      original workspace (needs Accessibility). Expose as Raycast script commands
+      ("New Chrome Window"…) and/or a key like ⌥N for the focused app.
 - [ ] SketchyBar, if the native menu bar isn't enough.
 - [ ] Try **HyprMac** (github.com/zacharytgray/HyprMac, `brew install --cask hyprmac`) if
       AeroSpace's manual i3-style tree gets annoying. Pros: Hyprland-like automatic dwindle

@@ -8,6 +8,7 @@
   imports = [
     ./defaults.nix
     ./homebrew.nix
+    ./launcher.nix
   ];
 
   # Nix itself is managed by the Determinate installer, not by nix-darwin.

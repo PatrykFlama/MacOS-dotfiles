@@ -39,7 +39,7 @@ outer.bottom = 8
 
 [mode.main.binding]
 # Only tiling/workspace bindings live here. App launchers (⌥↵ terminal, ⌥F Finder,
-# ⌥⇧F yazi, ⌥? cheatsheet, ⌥Space Raycast) and the tiling toggle (⌥⇧T) are in
+# ⌥⇧F yazi, ⌥? cheatsheet, ⌥Space launcher) and the tiling toggle (⌥⇧T) are in
 # Karabiner (scripts/gen-karabiner.py), so they keep working while tiling is off.
 
 # --- windows ---

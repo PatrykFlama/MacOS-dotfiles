@@ -24,7 +24,7 @@ Left ⌥ + arrows stays word-jump. Type **ł** with right ⌥ (left ⌥ L = focu
 | `⌥ F` | Finder (home folder) |
 | `⌥⇧ F` | yazi in a new terminal |
 | `⌥⇧ /` (`⌥?`) | This cheatsheet (floating window, `q` to close) |
-| `⌥ Space` | Raycast (launcher) |
+| `⌥ Space` | Launcher (Raycast or Spotlight – `launcher` in `flake.nix`) |
 
 **Tiling** (AeroSpace – off while tiling is toggled off; use `⌘W` to close windows then):
 
@@ -72,7 +72,7 @@ list of workspaces with their apps; click one to switch.
 
 | Keys | Action |
 | --- | --- |
-| `⌘ Space` or left `⌥ Space` | Raycast (launcher – see below) |
+| `⌘ Space` or left `⌥ Space` | Launcher: Raycast (see below) or Spotlight, per `flake.nix` |
 | `⌘ Tab` / `⌘ ⇧ Tab` | Switch **apps** |
 | `` ⌘ ` `` | Cycle windows of the current app |
 | `⌘ W` | Close window / tab |
@@ -137,12 +137,11 @@ Files go to `~/Pictures/Screenshots`.
 
 ---
 
-## Raycast (`⌘ Space` / left `⌥ Space`)
+## Raycast (`⌘ Space` / left `⌥ Space`, when `launcher = "raycast"`)
 
 | Keys (in Raycast) | Action |
 | --- | --- |
 | type + `↵` | Open app / bring it to the front if running |
-| type + `⌃ ↵` | **New window** of the app, even if it's already running |
 | `⌘ K` | All actions for the selected item |
 | `⌘ ,` | Raycast settings (hotkeys for any command, e.g. Clipboard History) |
 

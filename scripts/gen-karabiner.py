@@ -25,7 +25,7 @@ manip = [{
 # Left Option only: right Option + Space happens while typing Polish ("ą ")
 # and must keep typing a (non-breaking) space, not open the launcher.
 extra_rules = [{
-    "description": "Left Option + Space -> Command + Space (launcher: Raycast)",
+    "description": "Left Option + Space -> Command + Space (launcher: Raycast or Spotlight)",
     "manipulators": [{
         "type": "basic",
         "from": {"key_code": "spacebar", "modifiers": {"mandatory": ["left_option"]}},

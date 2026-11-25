@@ -113,7 +113,7 @@
                         ]
                     },
                     {
-                        "description": "Left Option + Space -> Command + Space (launcher: Raycast)",
+                        "description": "Left Option + Space -> Command + Space (launcher: Raycast or Spotlight)",
                         "manipulators": [
                             {
                                 "type": "basic",

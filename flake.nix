@@ -31,9 +31,11 @@
           # Absolute path of this repo on that machine; config/ is symlinked from here
           # so edits to dotfiles apply instantly, without a rebuild.
           dotfilesDir ? "/Users/${user}/workplace/MacOS-dotfiles",
+          # App launcher on ⌘Space: "raycast" or "spotlight" (see modules/darwin/launcher.nix).
+          launcher ? "raycast",
         }:
         nix-darwin.lib.darwinSystem {
-          specialArgs = { inherit hostname user dotfilesDir; };
+          specialArgs = { inherit hostname user dotfilesDir launcher; };
           modules = [
             { nixpkgs.hostPlatform = system; }
             ./modules/darwin
@@ -55,6 +57,7 @@
         "MacBook-Pro-Patryk" = mkHost {
           hostname = "MacBook-Pro-Patryk";
           user = "patryk";
+          launcher = "raycast"; # or "spotlight"
         };
       };
     };
