@@ -43,11 +43,7 @@ outer.bottom = 8
 # (scripts/gen-karabiner.py), so they work with any window manager.
 
 # --- windows ---
-# Hyprland-style close: last window closed = app quits. Afterwards, return to the
-# workspace we were on – macOS focuses another app's window after a close and AeroSpace
-# follows it to that app's workspace (AeroSpace bug #1097). The pause lets macOS finish
-# first; you may see a brief flicker. Doesn't cover ⌘W / ⌘Q.
-ctrl-alt-q = 'exec-and-forget ws="$(/opt/homebrew/bin/aerospace list-workspaces --focused)"; /opt/homebrew/bin/aerospace close --quit-if-last-window; sleep 0.2; /opt/homebrew/bin/aerospace workspace "$ws"'
+ctrl-alt-q = 'close --quit-if-last-window' # Hyprland-style: last window closed = app quits
 ctrl-alt-v = 'layout floating tiling'
 ctrl-alt-m = 'fullscreen'
 ctrl-alt-slash = 'layout tiles horizontal vertical'

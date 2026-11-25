@@ -41,9 +41,9 @@ Open ideas and follow-ups for this setup. Maintained together with Claude.
       split manually. Real dwindle elsewhere = yabai bsp (we decided against yabai).
 
 - [ ] Closing the last window on a workspace jumps to another workspace (AeroSpace bug
-      #1097, open: macOS focuses another app's window and AeroSpace follows). Worked around
-      for ⌥Q only (returns to the workspace after closing; brief flicker). ⌘W / ⌘Q / the red
-      button still jump. Remove the workaround once #1097 is fixed upstream.
+      #1097, open: macOS focuses another app's window and AeroSpace follows). Tried: ⌥Q
+      remembers the workspace, closes, sleeps 0.2 s, switches back – worked badly, reverted.
+      Wait for an upstream fix (watch #1097).
 
 ## Later / maybe
 
