@@ -12,11 +12,21 @@ Symbols: `⌘` Cmd · `⌥` Option · `⌃` Ctrl · `⇧` Shift · `⌫` Backspa
 Left ⌥ is turned into `⌃⌥` by Karabiner for the keys below (real `⌃⌥` works too).
 Left ⌥ + arrows stays word-jump. Type **ł** with right ⌥ (left ⌥ L = focus right).
 
+**Always on** (Karabiner – work in both tiling and native mode):
+
 | Keys | Action |
 | --- | --- |
+| `⌥⇧ T` | **Toggle tiling** on / off. Off = native windows, no borders, macOS 3-finger gestures (SwipeAeroSpace quits) |
 | `⌥ ↵` | New terminal (Ghostty) |
 | `⌥ F` | Finder (home folder) |
 | `⌥⇧ F` | yazi in a new terminal |
+| `⌥⇧ /` (`⌥?`) | This cheatsheet (floating window, `q` to close) |
+| `⌥ Space` | Spotlight |
+
+**Tiling** (AeroSpace – off while tiling is toggled off; use `⌘W` to close windows then):
+
+| Keys | Action |
+| --- | --- |
 | `⌥ Q` | Close window |
 | `⌥ V` | Toggle floating / tiling |
 | `⌥ M` | Fullscreen |
@@ -30,7 +40,6 @@ Left ⌥ + arrows stays word-jump. Type **ł** with right ⌥ (left ⌥ L = focu
 | `⌥ Tab` | Previous workspace |
 | `⌥⇧ Tab` | Move workspace to next monitor |
 | `⌥ R` | Reload AeroSpace config |
-| `⌥⇧ /` (`⌥?`) | This cheatsheet (floating window, `q` to close) |
 | `⌥⇧ ;` | Enter **service mode** ↓ |
 
 **Service mode** (one key, then back to normal):

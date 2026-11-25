@@ -18,7 +18,7 @@ modules/home/
   git.nix                 git + delta
   dotfiles.nix            which config/ dirs get symlinked into ~/.config
 config/                   aerospace, ghostty, karabiner, nvim, swipeaerospace, tmux
-scripts/                  fsearch, gen-karabiner.py + default.nix (installs commands)
+scripts/                  fsearch, tiling-toggle, gen-karabiner.py + default.nix
 docs/keybindings.md       keybindings cheatsheet
 ```
 
@@ -45,6 +45,10 @@ docs/keybindings.md       keybindings cheatsheet
 
 AeroSpace bindings are written as `ctrl-alt-*`; Karabiner maps **left Option** + those keys
 to ctrl+option, so in practice you press left ⌥. Right ⌥ keeps typing Polish letters.
+App launchers and the tiling toggle (left ⌥⇧T, `scripts/tiling-toggle`) are Karabiner rules
+that run commands directly, so they still work while AeroSpace is switched off (native
+macOS window behaviour). Both live in `scripts/gen-karabiner.py`.
+
 After adding/removing an AeroSpace binding, regenerate the Karabiner rule:
 
 ```sh

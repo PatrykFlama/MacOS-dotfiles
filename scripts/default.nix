@@ -12,5 +12,9 @@
       ];
       text = builtins.readFile ./fsearch;
     })
+    (pkgs.writeShellApplication {
+      name = "tiling-toggle";
+      text = builtins.readFile ./tiling-toggle;
+    })
   ];
 }

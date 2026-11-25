@@ -32,10 +32,33 @@ extra_rules = [{
         "to": [{"key_code": "spacebar", "modifiers": ["left_command"]}],
     }],
 }]
+
+# Launchers + tiling toggle. These live in Karabiner (not AeroSpace) so they keep
+# working while tiling is switched off. Commands run via /bin/sh.
+def launcher(key, shift, cmd):
+    mods = ["left_option"] + (["shift"] if shift else [])
+    return {"type": "basic",
+            "from": {"key_code": key, "modifiers": {"mandatory": mods}},
+            "to": [{"shell_command": cmd}]}
+
+extra_rules.insert(0, {
+    "description": "Left Option launchers (terminal, Finder, yazi, cheatsheet, tiling toggle)",
+    "manipulators": [
+        launcher("return_or_enter", False, "open -na Ghostty"),
+        launcher("f", False, "open ~"),
+        launcher("f", True, "open -na Ghostty --args -e zsh -lic yazi"),
+        launcher("slash", True, "open -na Ghostty --args --title=Keybindings -e zsh -lic "
+                                "'glow -p \"$DOTFILES/docs/keybindings.md\"'"),
+        launcher("t", True, "/etc/profiles/per-user/$USER/bin/tiling-toggle"),
+    ],
+})
 rules = [{
     "description": "Left Option + AeroSpace keys -> Ctrl+Option (right Option stays for Polish letters)",
     "manipulators": manip,
-}] + extra_rules
+}]
+# Launchers first: Karabiner uses the first matching rule, and the generic rule
+# above also matches shift (e.g. ⌥⇧/ must open the cheatsheet, not ⌃⌥⇧/).
+rules = extra_rules + rules
 # Keep whatever Karabiner/GUI stored (keyboard type, devices, settings);
 # only the selected profile's complex_modifications.rules are replaced.
 try:

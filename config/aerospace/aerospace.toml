@@ -7,6 +7,9 @@
 #
 # Adding/removing a binding? Regenerate the Karabiner key list (see README).
 # Left Option + arrows is deliberately NOT remapped (keeps word-jump in text).
+#
+# Tiling can be switched off/on at runtime with left ⌥⇧T (`tiling-toggle`): AeroSpace
+# then stops managing windows AND stops listening to the keys below.
 
 start-at-login = true
 
@@ -31,13 +34,9 @@ outer.top = 8
 outer.bottom = 8
 
 [mode.main.binding]
-# --- apps (mirrors the old Hyprland binds) ---
-ctrl-alt-enter = 'exec-and-forget open -na Ghostty'
-ctrl-alt-f = 'exec-and-forget open ~'
-ctrl-alt-shift-f = 'exec-and-forget open -na Ghostty --args -e zsh -lic yazi'
-# Keybindings cheatsheet (⌥? ) in a floating terminal; q to close.
-ctrl-alt-shift-slash = 'exec-and-forget open -na Ghostty --args --title=Keybindings -e zsh -lic "glow -p \$DOTFILES/docs/keybindings.md"'
-# Launcher (Spotlight, cmd+space), screenshots (cmd+shift+4/5) and lock (ctrl+cmd+q) are macOS-native.
+# Only tiling/workspace bindings live here. App launchers (⌥↵ terminal, ⌥F Finder,
+# ⌥⇧F yazi, ⌥? cheatsheet, ⌥Space Spotlight) and the tiling toggle (⌥⇧T) are in
+# Karabiner (scripts/gen-karabiner.py), so they keep working while tiling is off.
 
 # --- windows ---
 ctrl-alt-q = 'close'

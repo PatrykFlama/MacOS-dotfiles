@@ -27,6 +27,13 @@ Open ideas and follow-ups for this setup. Maintained together with Claude.
 - [ ] Migrate `config/aerospace/aerospace.toml` to `config-version = 2` (AeroSpace warns
       on reload that version 1 is outdated; see the guide's "config-version" section).
 
+- [ ] Hyprland-style "swipe past last workspace = new empty workspace". SwipeAeroSpace
+      stops at the last occupied workspace (`skipEmptyTarget` returns nil when
+      `wrap = false`) and has no custom-command hook. Plan: open a feature request / small
+      PR upstream (github.com/MediosZ/SwipeAeroSpace): at the end, focus the first unused
+      workspace instead of stopping. Fallbacks: `skip-empty = false` (swipes through all
+      10 numbered workspaces) or BetterTouchTool + script (paid).
+
 ## Later / maybe
 
 - [ ] Revisit launcher after a Spotlight trial (Raycast was dropped for now).

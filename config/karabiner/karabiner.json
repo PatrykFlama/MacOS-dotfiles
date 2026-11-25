@@ -4,7 +4,7 @@
             "complex_modifications": {
                 "rules": [
                     {
-                        "description": "Left Option + AeroSpace keys -> Ctrl+Option (right Option stays for Polish letters)",
+                        "description": "Left Option launchers (terminal, Finder, yazi, cheatsheet, tiling toggle)",
                         "manipulators": [
                             {
                                 "type": "basic",
@@ -13,19 +13,12 @@
                                     "modifiers": {
                                         "mandatory": [
                                             "left_option"
-                                        ],
-                                        "optional": [
-                                            "shift"
                                         ]
                                     }
                                 },
                                 "to": [
                                     {
-                                        "key_code": "return_or_enter",
-                                        "modifiers": [
-                                            "left_control",
-                                            "left_option"
-                                        ]
+                                        "shell_command": "open -na Ghostty"
                                     }
                                 ]
                             },
@@ -36,19 +29,29 @@
                                     "modifiers": {
                                         "mandatory": [
                                             "left_option"
-                                        ],
-                                        "optional": [
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "open ~"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {
+                                    "key_code": "f",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_option",
                                             "shift"
                                         ]
                                     }
                                 },
                                 "to": [
                                     {
-                                        "key_code": "f",
-                                        "modifiers": [
-                                            "left_control",
-                                            "left_option"
-                                        ]
+                                        "shell_command": "open -na Ghostty --args -e zsh -lic yazi"
                                     }
                                 ]
                             },
@@ -58,23 +61,63 @@
                                     "key_code": "slash",
                                     "modifiers": {
                                         "mandatory": [
-                                            "left_option"
-                                        ],
-                                        "optional": [
+                                            "left_option",
                                             "shift"
                                         ]
                                     }
                                 },
                                 "to": [
                                     {
-                                        "key_code": "slash",
-                                        "modifiers": [
-                                            "left_control",
-                                            "left_option"
-                                        ]
+                                        "shell_command": "open -na Ghostty --args --title=Keybindings -e zsh -lic 'glow -p \"$DOTFILES/docs/keybindings.md\"'"
                                     }
                                 ]
                             },
+                            {
+                                "type": "basic",
+                                "from": {
+                                    "key_code": "t",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_option",
+                                            "shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "/etc/profiles/per-user/$USER/bin/tiling-toggle"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Left Option + Space -> Command + Space (Spotlight)",
+                        "manipulators": [
+                            {
+                                "type": "basic",
+                                "from": {
+                                    "key_code": "spacebar",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "spacebar",
+                                        "modifiers": [
+                                            "left_command"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Left Option + AeroSpace keys -> Ctrl+Option (right Option stays for Polish letters)",
+                        "manipulators": [
                             {
                                 "type": "basic",
                                 "from": {
@@ -137,6 +180,29 @@
                                 "to": [
                                     {
                                         "key_code": "m",
+                                        "modifiers": [
+                                            "left_control",
+                                            "left_option"
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {
+                                    "key_code": "slash",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_option"
+                                        ],
+                                        "optional": [
+                                            "shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "slash",
                                         "modifiers": [
                                             "left_control",
                                             "left_option"
@@ -600,30 +666,6 @@
                                         "modifiers": [
                                             "left_control",
                                             "left_option"
-                                        ]
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Left Option + Space -> Command + Space (Spotlight)",
-                        "manipulators": [
-                            {
-                                "type": "basic",
-                                "from": {
-                                    "key_code": "spacebar",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_option"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "spacebar",
-                                        "modifiers": [
-                                            "left_command"
                                         ]
                                     }
                                 ]
