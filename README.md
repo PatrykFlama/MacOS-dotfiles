@@ -9,7 +9,7 @@ symlinked into `~/.config`, so they can be edited live without rebuilding.
 ```
 flake.nix                 inputs + one entry per machine (hostname, user, repo path)
 modules/darwin/
-  default.nix             nix settings, hostname, Touch ID sudo, fonts
+  default.nix             nix settings, hostname, Touch ID sudo, fonts, window borders
   defaults.nix            macOS preferences (Dock, Finder, keyboard, trackpad…)
   homebrew.nix            GUI apps (casks)
 modules/home/
@@ -17,7 +17,7 @@ modules/home/
   shell.nix               zsh, aliases, prompt
   git.nix                 git + delta
   dotfiles.nix            which config/ dirs get symlinked into ~/.config
-config/                   aerospace, ghostty, karabiner, nvim, tmux
+config/                   aerospace, ghostty, karabiner, nvim, swipeaerospace, tmux
 scripts/                  fsearch, gen-karabiner.py + default.nix (installs commands)
 docs/keybindings.md       keybindings cheatsheet
 ```
@@ -39,6 +39,7 @@ docs/keybindings.md       keybindings cheatsheet
    - open **AeroSpace** once and grant Accessibility permission,
    - open **Karabiner-Elements** once and approve what it asks for (driver/system extension,
      Input Monitoring). It provides the left-Option window-manager key.
+   - open **SwipeAeroSpace** once and grant Accessibility permission (trackpad gestures).
 
 ## Window-manager key
 

@@ -1,0 +1,11 @@
+# SwipeAeroSpace – trackpad gestures for AeroSpace. Reloads automatically on save.
+# Careful: an unknown key or invalid TOML makes the app ignore this whole file.
+# Docs: https://github.com/MediosZ/SwipeAeroSpace
+
+fingers = "Three"        # "Three" or "Four"
+natural = true           # swipe direction follows content, like scrolling
+wrap = false             # don't jump from the last workspace back to the first
+skip-empty = true        # only visit workspaces that have windows
+
+swipeUpOverview = true   # 3-finger swipe up: workspace overview (replaces Mission Control)
+swipeUpFingers = "Three"

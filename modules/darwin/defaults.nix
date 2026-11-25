@@ -58,6 +58,10 @@
     trackpad = {
       Clicking = false; # tap to click
       TrackpadThreeFingerDrag = false;
+      # 3-finger swipes belong to SwipeAeroSpace (left/right: workspaces, up: overview).
+      # 4-finger swipes keep the macOS defaults (Spaces / Mission Control).
+      TrackpadThreeFingerHorizSwipeGesture = 0;
+      TrackpadThreeFingerVertSwipeGesture = 0;
     };
 
     screencapture = {

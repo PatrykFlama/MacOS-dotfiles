@@ -13,7 +13,10 @@
       cleanup = "none";
     };
 
-    taps = [ "nikitabobko/tap" ];
+    taps = [
+      "nikitabobko/tap"
+      "mediosz/tap"
+    ];
 
     brews = [ ];
 
@@ -22,6 +25,7 @@
       "nikitabobko/tap/aerospace" # tiling window manager (Hyprland replacement)
       "ghostty" # terminal
       "karabiner-elements" # left Option -> AeroSpace modifier (see config/karabiner)
+      "mediosz/tap/swipeaerospace" # 3-finger swipe -> AeroSpace workspaces (see config/swipeaerospace)
 
       # browsers
       "google-chrome"

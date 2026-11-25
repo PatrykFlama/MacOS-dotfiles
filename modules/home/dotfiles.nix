@@ -10,6 +10,8 @@ in
     "aerospace".source = link "aerospace";
     "ghostty".source = link "ghostty";
     "karabiner".source = link "karabiner";
+    # SwipeAeroSpace reads ~/.config/swipeareospace (sic).
+    "swipeareospace".source = link "swipeaerospace";
     "nvim".source = link "nvim";
     "tmux".source = link "tmux";
   };

@@ -25,9 +25,6 @@ Open ideas and follow-ups for this setup. Maintained together with Claude.
 ## Later / maybe
 
 - [ ] Revisit launcher after a Spotlight trial (Raycast was dropped for now).
-- [ ] Trackpad swipe → AeroSpace workspace next/prev (community helper, e.g. SwipeAeroSpace;
-      check maintenance + macOS 27 first). Then disable the native 3-finger Spaces swipe.
-- [ ] JankyBorders: coloured border on the focused window (Hyprland-style active border).
 - [ ] SketchyBar, if the native menu bar isn't enough.
 - [ ] Workspace-switch animations: AeroSpace has none by design. Only option is yabai
       (native Spaces, macOS slide animation) - needs partial SIP disable for full features.

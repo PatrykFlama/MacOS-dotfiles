@@ -43,6 +43,14 @@ Left ⌥ + arrows stays word-jump. Type **ł** with right ⌥ (left ⌥ L = focu
 
 Mouse: hold `⌃⌘` and drag anywhere on a window to move it.
 
+**Trackpad** (SwipeAeroSpace):
+
+| Gesture | Action |
+| --- | --- |
+| 3 fingers ← / → | Previous / next workspace (skips empty ones) |
+| 3 fingers ↑ | Workspace overview |
+| 4 fingers ← / → / ↑ | macOS Spaces / Mission Control (rarely useful with AeroSpace) |
+
 ---
 
 ## macOS – system
