@@ -31,5 +31,11 @@ Open ideas and follow-ups for this setup. Maintained together with Claude.
 
 - [ ] Revisit launcher after a Spotlight trial (Raycast was dropped for now).
 - [ ] SketchyBar, if the native menu bar isn't enough.
+- [ ] Try **HyprMac** (github.com/zacharytgray/HyprMac, `brew install --cask hyprmac`) if
+      AeroSpace's manual i3-style tree gets annoying. Pros: Hyprland-like automatic dwindle
+      tiling, built-in Hypr key (Caps Lock / F13–F20, so no Karabiner), signed, overview,
+      dims inactive windows. Cons: no real animations either (same approach as AeroSpace),
+      no gestures without BetterTouchTool, config via GUI (JSON in Application Support),
+      very young (v0.29, ~daily releases), macOS 27 support unconfirmed.
 - [ ] Workspace-switch animations: AeroSpace has none by design. Only option is yabai
       (native Spaces, macOS slide animation) - needs partial SIP disable for full features.
