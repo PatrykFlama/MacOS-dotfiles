@@ -22,6 +22,11 @@ Open ideas and follow-ups for this setup. Maintained together with Claude.
       `onActivation.cleanup` from `"none"` to `"zap"` so Homebrew mirrors the config
       (removes leftovers like the old `vim` formula).
 
+## AeroSpace
+
+- [ ] Migrate `config/aerospace/aerospace.toml` to `config-version = 2` (AeroSpace warns
+      on reload that version 1 is outdated; see the guide's "config-version" section).
+
 ## Later / maybe
 
 - [ ] Revisit launcher after a Spotlight trial (Raycast was dropped for now).

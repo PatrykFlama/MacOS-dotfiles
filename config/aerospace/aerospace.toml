@@ -35,6 +35,8 @@ outer.bottom = 8
 ctrl-alt-enter = 'exec-and-forget open -na Ghostty'
 ctrl-alt-f = 'exec-and-forget open ~'
 ctrl-alt-shift-f = 'exec-and-forget open -na Ghostty --args -e zsh -lic yazi'
+# Keybindings cheatsheet (⌥? ) in a floating terminal; q to close.
+ctrl-alt-shift-slash = 'exec-and-forget open -na Ghostty --args --title=Keybindings -e zsh -lic "glow -p \$DOTFILES/docs/keybindings.md"'
 # Launcher (Spotlight, cmd+space), screenshots (cmd+shift+4/5) and lock (ctrl+cmd+q) are macOS-native.
 
 # --- windows ---
@@ -108,4 +110,9 @@ run = 'layout floating'
 
 [[on-window-detected]]
 if.app-id = 'com.apple.ActivityMonitor'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.mitchellh.ghostty'
+if.window-title-regex-substring = 'Keybindings'
 run = 'layout floating'

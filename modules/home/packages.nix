@@ -16,6 +16,7 @@
     btop
     tmux # config is symlinked from config/tmux (no programs.tmux: it would write its own tmux.conf)
     fastfetch
+    glow # render markdown in the terminal (keybindings cheatsheet)
 
     # media
     ffmpeg

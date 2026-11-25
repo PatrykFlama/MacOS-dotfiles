@@ -30,6 +30,7 @@ Left ⌥ + arrows stays word-jump. Type **ł** with right ⌥ (left ⌥ L = focu
 | `⌥ Tab` | Previous workspace |
 | `⌥⇧ Tab` | Move workspace to next monitor |
 | `⌥ R` | Reload AeroSpace config |
+| `⌥⇧ /` (`⌥?`) | This cheatsheet (floating window, `q` to close) |
 | `⌥⇧ ;` | Enter **service mode** ↓ |
 
 **Service mode** (one key, then back to normal):
