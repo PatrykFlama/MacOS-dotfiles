@@ -9,6 +9,7 @@
     ./defaults.nix
     ./homebrew.nix
     ./launcher.nix
+    ./wm
   ];
 
   # Nix itself is managed by the Determinate installer, not by nix-darwin.
@@ -33,16 +34,6 @@
   };
 
   fonts.packages = [ pkgs.nerd-fonts.jetbrains-mono ];
-
-  # Hyprland-style border around the focused window (Tokyo Night colours).
-  services.jankyborders = {
-    enable = true;
-    width = 5.0;
-    hidpi = true;
-    style = "round";
-    active_color = "0xff82aaff"; # blue
-    inactive_color = "0xff444a73"; # dim
-  };
 
   time.timeZone = "Europe/Warsaw";
 

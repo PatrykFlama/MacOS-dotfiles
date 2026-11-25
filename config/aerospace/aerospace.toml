@@ -1,15 +1,15 @@
 # AeroSpace – i3/Hyprland-style tiling for macOS.  Docs: https://nikitabobko.github.io/AeroSpace/guide
 #
-# Modifier: press LEFT Option. Karabiner (config/karabiner) turns left-Option + any
-# key bound here into ctrl+option + key, which is what these bindings listen for.
-# Right Option is untouched, so it types ą ę ś ł ż ź ć ń ó (Polish Pro) as usual.
-# Pressing real ctrl+option also works (e.g. if Karabiner isn't running).
+# Active when `windowManager = "aerospace"` in flake.nix (modules/darwin/wm/aerospace.nix).
 #
-# Adding/removing a binding? Regenerate the Karabiner key list (see README).
+# Modifier: press LEFT Option. Karabiner turns left-Option + any key bound here into
+# ctrl+option + key, which is what these bindings listen for. Right Option is untouched,
+# so it types ą ę ś ł ż ź ć ń ó (Polish Pro) as usual. Pressing real ctrl+option also
+# works (e.g. if Karabiner isn't running).
+#
+# Adding/removing a binding? Run `drs` – the Karabiner key list is generated from this
+# file (scripts/gen-karabiner.py). Edits to existing bindings apply on reload (⌥R).
 # Left Option + arrows is deliberately NOT remapped (keeps word-jump in text).
-#
-# Tiling can be switched off/on at runtime with left ⌥⇧T (`tiling-toggle`): AeroSpace
-# then stops managing windows AND stops listening to the keys below.
 
 start-at-login = true
 
@@ -39,8 +39,8 @@ outer.bottom = 8
 
 [mode.main.binding]
 # Only tiling/workspace bindings live here. App launchers (⌥↵ terminal, ⌥F Finder,
-# ⌥⇧F yazi, ⌥? cheatsheet, ⌥Space launcher) and the tiling toggle (⌥⇧T) are in
-# Karabiner (scripts/gen-karabiner.py), so they keep working while tiling is off.
+# ⌥⇧F yazi, ⌥? cheatsheet, ⌥Space launcher) are Karabiner rules
+# (scripts/gen-karabiner.py), so they work with any window manager.
 
 # --- windows ---
 ctrl-alt-q = 'close --quit-if-last-window' # Hyprland-style: last window closed = app quits

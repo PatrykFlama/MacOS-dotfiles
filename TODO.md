@@ -56,5 +56,7 @@ Open ideas and follow-ups for this setup. Maintained together with Claude.
       dims inactive windows. Cons: no real animations either (same approach as AeroSpace),
       no gestures without BetterTouchTool, config via GUI (JSON in Application Support),
       very young (v0.29, ~daily releases), macOS 27 support unconfirmed.
+      To try it: add `modules/darwin/wm/hyprmac.nix` (pattern: `wm/aerospace.nix`) and set
+      `windowManager = "hyprmac"` in flake.nix.
 - [ ] Workspace-switch animations: AeroSpace has none by design. Only option is yabai
       (native Spaces, macOS slide animation) - needs partial SIP disable for full features.

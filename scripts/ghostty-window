@@ -53,8 +53,8 @@ else
 fi
 
 if [[ $float == 1 ]]; then
-  # Give the window a moment to appear and take focus, then float it (no-op while
-  # tiling is toggled off).
+  # Give the window a moment to appear and take focus, then float it (no-op without
+  # AeroSpace).
   sleep 0.4
   /opt/homebrew/bin/aerospace layout floating >/dev/null 2>&1 || true
 fi

@@ -2,31 +2,29 @@
 
 Symbols: `⌘` Cmd · `⌥` Option · `⌃` Ctrl · `⇧` Shift · `⌫` Backspace · `↵` Return
 
-> **Polish Pro layout:** `⌥ + letter` types ą ę ś ł ż ź ć ń ó. **Left ⌥** + window-manager keys belongs to AeroSpace;
+> **Polish Pro layout:** `⌥ + letter` types ą ę ś ł ż ź ć ń ó. **Left ⌥** + launcher / window-manager keys is taken (Karabiner);
 > **right ⌥** always types Polish letters. In Ghostty, other left-⌥ combos act as Alt.
 >
-> **ISO keyboard:** the key between left Shift and Z is a second left Shift (Karabiner);
+> **ISO keyboard** (`keyboard = "iso"`): the key between left Shift and Z is a second left Shift (Karabiner);
 > the top-left key types `` ` `` / `~`.
 
 ---
 
-## Window manager – AeroSpace (mod = **left** `⌥`)
-
-Left ⌥ is turned into `⌃⌥` by Karabiner for the keys below (real `⌃⌥` works too).
-Left ⌥ + arrows stays word-jump. Type **ł** with right ⌥ (left ⌥ L = focus right).
-
-**Always on** (Karabiner – work in both tiling and native mode):
+## Launchers (left `⌥`, any window manager)
 
 | Keys | Action |
 | --- | --- |
-| `⌥⇧ T` | **Toggle tiling** on / off. Off = native windows, no borders, macOS 3-finger gestures (SwipeAeroSpace quits) |
 | `⌥ ↵` | New terminal (Ghostty) |
 | `⌥ F` | Finder (home folder) |
 | `⌥⇧ F` | yazi in a new terminal |
 | `⌥⇧ /` (`⌥?`) | This cheatsheet (floating window, `q` to close) |
 | `⌥ Space` | Launcher (Raycast or Spotlight – `launcher` in `flake.nix`) |
 
-**Tiling** (AeroSpace – off while tiling is toggled off; use `⌘W` to close windows then):
+## Window manager – AeroSpace (`windowManager = "aerospace"`, mod = **left** `⌥`)
+
+Left ⌥ is turned into `⌃⌥` by Karabiner for the keys below (real `⌃⌥` works too).
+Left ⌥ + arrows stays word-jump. Type **ł** with right ⌥ (left ⌥ L = focus right).
+With `windowManager = "none"` none of this exists: plain macOS windows, `⌘W` / `⌘Q`.
 
 | Keys | Action |
 | --- | --- |

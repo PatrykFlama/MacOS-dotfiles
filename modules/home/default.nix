@@ -5,6 +5,7 @@
     ./shell.nix
     ./git.nix
     ./dotfiles.nix
+    ./karabiner.nix
     ../../scripts
   ];
 

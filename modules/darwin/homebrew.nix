@@ -15,21 +15,16 @@
       cleanup = "none";
     };
 
-    taps = [
-      "nikitabobko/tap"
-      "mediosz/tap"
-    ];
+    # Window-manager apps (AeroSpace & co.) are added by modules/darwin/wm/,
+    # the launcher (Raycast) by modules/darwin/launcher.nix.
+    taps = [ ];
 
     brews = [ ];
 
     casks = [
       # desktop / workflow
-      "nikitabobko/tap/aerospace" # tiling window manager (Hyprland replacement)
       "ghostty" # terminal
-      "karabiner-elements" # left Option -> AeroSpace modifier (see config/karabiner)
-      "mediosz/tap/swipeaerospace" # 3-finger swipe -> AeroSpace workspaces (see config/swipeaerospace)
-      "swiftbar" # menu-bar workspace indicator (see config/swiftbar)
-      # (Raycast is added by launcher.nix when launcher = "raycast")
+      "karabiner-elements" # left-Option launchers/WM keys (scripts/gen-karabiner.py)
 
       # browsers
       "google-chrome"

@@ -31,11 +31,25 @@
           # Absolute path of this repo on that machine; config/ is symlinked from here
           # so edits to dotfiles apply instantly, without a rebuild.
           dotfilesDir ? "/Users/${user}/workplace/MacOS-dotfiles",
-          # App launcher on ⌘Space: "raycast" or "spotlight" (see modules/darwin/launcher.nix).
+          # Per-machine choices, independent of each other:
+          #   windowManager: "aerospace" | "none"     (modules/darwin/wm/)
+          #   launcher:      "raycast" | "spotlight"  (modules/darwin/launcher.nix)
+          #   keyboard:      "iso" | "ansi"           (Karabiner: ISO extra-Shift key)
+          windowManager ? "aerospace",
           launcher ? "raycast",
+          keyboard ? "ansi",
         }:
         nix-darwin.lib.darwinSystem {
-          specialArgs = { inherit hostname user dotfilesDir launcher; };
+          specialArgs = {
+            inherit
+              hostname
+              user
+              dotfilesDir
+              windowManager
+              launcher
+              keyboard
+              ;
+          };
           modules = [
             { nixpkgs.hostPlatform = system; }
             ./modules/darwin
@@ -45,7 +59,14 @@
                 useGlobalPkgs = true;
                 useUserPackages = true;
                 backupFileExtension = "hm-backup";
-                extraSpecialArgs = { inherit user dotfilesDir; };
+                extraSpecialArgs = {
+                  inherit
+                    user
+                    dotfilesDir
+                    windowManager
+                    keyboard
+                    ;
+                };
                 users.${user} = import ./modules/home;
               };
             }
@@ -57,7 +78,9 @@
         "MacBook-Pro-Patryk" = mkHost {
           hostname = "MacBook-Pro-Patryk";
           user = "patryk";
+          windowManager = "aerospace"; # or "none"
           launcher = "raycast"; # or "spotlight"
+          keyboard = "iso"; # or "ansi"
         };
       };
     };

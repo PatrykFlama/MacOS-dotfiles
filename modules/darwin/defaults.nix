@@ -1,6 +1,6 @@
 # macOS preferences (the `defaults write` stuff), applied on every rebuild.
 # Some settings only take effect after logging out and back in.
-{ user, dotfilesDir, ... }:
+{ user, ... }:
 {
   system.defaults = {
     NSGlobalDomain = {
@@ -32,14 +32,7 @@
       autohide-delay = 0.0;
       show-recents = false;
       tilesize = 48;
-      # Keep Spaces in a fixed order (required for a sane AeroSpace experience).
-      mru-spaces = false;
-      # AeroSpace recommendation: makes Mission Control usable with its hidden windows.
-      expose-group-apps = true;
     };
-
-    # AeroSpace recommendation: one set of Spaces per display.
-    spaces.spans-displays = false;
 
     finder = {
       AppleShowAllFiles = true;
@@ -58,10 +51,7 @@
     trackpad = {
       Clicking = false; # tap to click
       TrackpadThreeFingerDrag = false;
-      # 3-finger swipes belong to SwipeAeroSpace (left/right: workspaces, up: overview).
-      # 4-finger swipes keep the macOS defaults (Spaces / Mission Control).
-      TrackpadThreeFingerHorizSwipeGesture = 0;
-      TrackpadThreeFingerVertSwipeGesture = 0;
+      # 3-finger swipe gestures: set by the window-manager module (modules/darwin/wm/).
     };
 
     screencapture = {
@@ -71,10 +61,6 @@
     };
 
     loginwindow.GuestEnabled = false;
-
-    # SwiftBar: load plugins (workspace indicator) straight from the repo.
-    # Undocumented key; if SwiftBar still asks for a folder, pick config/swiftbar.
-    CustomUserPreferences."com.ameba.SwiftBar".PluginDirectory = "${dotfilesDir}/config/swiftbar";
   };
 
   system.activationScripts.postActivation.text = ''
