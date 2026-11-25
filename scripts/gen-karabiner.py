@@ -23,9 +23,9 @@ manip = [{
 } for k in keys]
 # Extra hand-written rules (kept here so regenerating doesn't drop them).
 # Left Option only: right Option + Space happens while typing Polish ("ą ")
-# and must keep typing a (non-breaking) space, not open Spotlight.
+# and must keep typing a (non-breaking) space, not open the launcher.
 extra_rules = [{
-    "description": "Left Option + Space -> Command + Space (Spotlight)",
+    "description": "Left Option + Space -> Command + Space (launcher: Raycast)",
     "manipulators": [{
         "type": "basic",
         "from": {"key_code": "spacebar", "modifiers": {"mandatory": ["left_option"]}},

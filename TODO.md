@@ -6,11 +6,10 @@ Open ideas and follow-ups for this setup. Maintained together with Claude.
 
 - [ ] **Free up `⌃←` / `⌃→` / `⌃↑` / `⌃↓`.** macOS uses them to switch Spaces and for
       Mission Control/app windows, which steals word-jump in terminals (and AeroSpace
-      replaces Spaces anyway). Disable via
-      `system.defaults.CustomUserPreferences."com.apple.symbolichotkeys"` in
-      `modules/darwin/defaults.nix`.
-      Caveat: this rewrites the whole shortcuts dict, so later manual changes in
-      *System Settings → Keyboard Shortcuts* get reset on rebuild unless added to the config.
+      replaces Spaces anyway). Disable like the Spotlight shortcut in
+      `modules/darwin/defaults.nix` (`defaults write com.apple.symbolichotkeys
+      AppleSymbolicHotKeys -dict-add <id> …` in postActivation, which merges single entries).
+      IDs: 79/80/81/82 (Spaces left/right), 32/34 (Mission Control), 33/35 (app windows).
 - [ ] **Make `Home` / `End` work per line** (macOS default: start/end of document) via
       `~/Library/KeyBindings/DefaultKeyBinding.dict`, managed by home-manager.
       Only affects native Cocoa apps; browsers/Electron handle these keys themselves.
@@ -43,7 +42,12 @@ Open ideas and follow-ups for this setup. Maintained together with Claude.
 
 ## Later / maybe
 
-- [ ] Revisit launcher after a Spotlight trial (Raycast was dropped for now).
+- [ ] Check Raycast's `⌃↵` (New Application Window) with AeroSpace: does the new window
+      land on the current workspace, or does AeroSpace first jump to the app's existing
+      workspace? If it jumps, add an AeroSpace rule/script to pull the new window back.
+- [ ] Raycast `↵` on a running app only focuses it ("Open" is the fixed primary action;
+      "New Application Window" is `⌃↵`, not remappable). Possible AeroSpace-side idea
+      later; a Karabiner ↵/⌃↵ swap inside Raycast was rejected (breaks all other items).
 - [ ] SketchyBar, if the native menu bar isn't enough.
 - [ ] Try **HyprMac** (github.com/zacharytgray/HyprMac, `brew install --cask hyprmac`) if
       AeroSpace's manual i3-style tree gets annoying. Pros: Hyprland-like automatic dwindle
