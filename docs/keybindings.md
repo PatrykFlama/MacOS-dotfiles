@@ -4,6 +4,9 @@ Symbols: `⌘` Cmd · `⌥` Option · `⌃` Ctrl · `⇧` Shift · `⌫` Backspa
 
 > **Polish Pro layout:** `⌥ + letter` types ą ę ś ł ż ź ć ń ó. **Left ⌥** + window-manager keys belongs to AeroSpace;
 > **right ⌥** always types Polish letters. In Ghostty, other left-⌥ combos act as Alt.
+>
+> **ISO keyboard:** the key between left Shift and Z is a second left Shift (Karabiner);
+> the top-left key types `` ` `` / `~`.
 
 ---
 
@@ -27,7 +30,7 @@ Left ⌥ + arrows stays word-jump. Type **ł** with right ⌥ (left ⌥ L = focu
 
 | Keys | Action |
 | --- | --- |
-| `⌥ Q` | Close window |
+| `⌥ Q` | Close window; quits the app if it was its last window (Hyprland-style) |
 | `⌥ V` | Toggle floating / tiling |
 | `⌥ M` | Fullscreen |
 | `⌥ /` | Tiles layout (toggle horizontal / vertical) |
@@ -36,7 +39,7 @@ Left ⌥ + arrows stays word-jump. Type **ł** with right ⌥ (left ⌥ L = focu
 | `⌥⇧ H J K L` (or `⌃⌥⇧` + arrows) | Move window |
 | `⌥ -` / `⌥ =` | Shrink / grow window |
 | `⌥ 1 … 9, 0` | Go to workspace 1 … 10 |
-| `⌥⇧ 1 … 9, 0` | Move window to workspace 1 … 10 |
+| `⌥⇧ 1 … 9, 0` | Move window to workspace 1 … 10 and follow it |
 | `⌥ Tab` | Previous workspace |
 | `⌥⇧ Tab` | Move workspace to next monitor |
 | `⌥ R` | Reload AeroSpace config |

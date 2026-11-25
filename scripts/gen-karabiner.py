@@ -33,6 +33,19 @@ extra_rules = [{
     }],
 }]
 
+# ISO keyboard: the key between left Shift and Z becomes a second left Shift
+# (ISO's left Shift is short). On Apple ISO keyboards that key reports
+# grave_accent_and_tilde (checked in Karabiner-EventViewer); the top-left key
+# (non_us_backslash) is untouched and still types ` and ~.
+extra_rules.insert(0, {
+    "description": "ISO: key next to left Shift -> left Shift",
+    "manipulators": [{
+        "type": "basic",
+        "from": {"key_code": "grave_accent_and_tilde", "modifiers": {"optional": ["any"]}},
+        "to": [{"key_code": "left_shift"}],
+    }],
+})
+
 # Launchers + tiling toggle. These live in Karabiner (not AeroSpace) so they keep
 # working while tiling is switched off. Commands run via /bin/sh.
 def launcher(key, shift, cmd):

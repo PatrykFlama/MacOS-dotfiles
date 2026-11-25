@@ -92,6 +92,27 @@
                         ]
                     },
                     {
+                        "description": "ISO: key next to left Shift -> left Shift",
+                        "manipulators": [
+                            {
+                                "type": "basic",
+                                "from": {
+                                    "key_code": "grave_accent_and_tilde",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_shift"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
                         "description": "Left Option + Space -> Command + Space (Spotlight)",
                         "manipulators": [
                             {

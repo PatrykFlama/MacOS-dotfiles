@@ -6,6 +6,8 @@ fingers = "Three"        # "Three" or "Four"
 natural = true           # swipe direction follows content, like scrolling
 wrap = false             # don't jump from the last workspace back to the first
 skip-empty = true        # only visit workspaces that have windows
+multiSwipe = false       # one swipe = exactly one workspace (default true: a long swipe
+                         # moves several steps, which feels like scrolling)
 
 swipeUpOverview = true   # 3-finger swipe up: workspace overview (replaces Mission Control)
 swipeUpFingers = "Three"
