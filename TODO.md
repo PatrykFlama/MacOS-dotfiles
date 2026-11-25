@@ -40,6 +40,11 @@ Open ideas and follow-ups for this setup. Maintained together with Claude.
       (imitation; may flicker / guess direction wrong), or bind `join-with` to keys and
       split manually. Real dwindle elsewhere = yabai bsp (we decided against yabai).
 
+- [ ] Closing the last window on a workspace jumps to another workspace (AeroSpace bug
+      #1097, open: macOS focuses another app's window and AeroSpace follows). Worked around
+      for ⌥Q only (returns to the workspace after closing; brief flicker). ⌘W / ⌘Q / the red
+      button still jump. Remove the workaround once #1097 is fixed upstream.
+
 ## Later / maybe
 
 - [ ] "New window here" for already-running apps (Raycast/Spotlight just focus them, and
