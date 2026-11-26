@@ -32,7 +32,6 @@ With `windowManager = "none"` none of this exists: plain macOS windows, `⌘W` /
 | `⌥ V` | Toggle floating / tiling |
 | `⌥ M` | Fullscreen |
 | `⌥ /` | Tiles layout (toggle horizontal / vertical) |
-| `⌥ ,` | Accordion layout (toggle horizontal / vertical) |
 | `⌥ H J K L` (or `⌃⌥` + arrows) | Focus left / down / up / right |
 | `⌥⇧ H J K L` (or `⌃⌥⇧` + arrows) | Move window |
 | `⌥ -` / `⌥ =` | Shrink / grow window |

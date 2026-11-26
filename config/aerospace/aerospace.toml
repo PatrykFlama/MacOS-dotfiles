@@ -47,7 +47,6 @@ ctrl-alt-q = 'close --quit-if-last-window' # Hyprland-style: last window closed 
 ctrl-alt-v = 'layout floating tiling'
 ctrl-alt-m = 'fullscreen'
 ctrl-alt-slash = 'layout tiles horizontal vertical'
-ctrl-alt-comma = 'layout accordion horizontal vertical'
 
 ctrl-alt-h = 'focus left'
 ctrl-alt-j = 'focus down'
