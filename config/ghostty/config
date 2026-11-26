@@ -15,10 +15,10 @@ macos-option-as-alt = left
 
 copy-on-select = clipboard
 mouse-hide-while-typing = true
-# ssh-terminfo: on the first `ssh` to a host, install Ghostty's terminfo there (fixes
-# "'xterm-ghostty': unknown terminal type" on servers); ssh-env: if that can't be done,
-# fall back to TERM=xterm-256color for that session.
-shell-integration-features = cursor,sudo,title,ssh-env,ssh-terminfo
+# ssh-env: `ssh` sessions get TERM=xterm-256color (+ COLORTERM=truecolor) instead of
+# xterm-ghostty, which servers don't know ("unknown terminal type") and whose shell
+# configs only enable colors for TERMs they recognise (e.g. *-256color).
+shell-integration-features = cursor,sudo,title,ssh-env
 
 # Tokyo Night Moon (same palette as the tmux theme)
 background = #222436
