@@ -39,6 +39,7 @@ With `windowManager = "none"` none of this exists: plain macOS windows, `⌘W` /
 | `⌥ 1 … 9, 0` | Go to workspace 1 … 10 |
 | `⌥⇧ 1 … 9, 0` | Move window to workspace 1 … 10 and follow it |
 | `⌥ Tab` / `⌥⇧ Tab` | Next / previous workspace (only ones with windows, wraps around) |
+| `⌘ Tab` / `⌘⇧ Tab` | Next / previous window **in this workspace** (wraps around; replaces the app switcher) |
 | `⌥ R` | Reload AeroSpace config |
 | `⌥⇧ ;` | Enter **service mode** ↓ |
 
@@ -71,7 +72,7 @@ list of workspaces with their apps; click one to switch.
 | Keys | Action |
 | --- | --- |
 | `⌘ Space` or left `⌥ Space` | Launcher: Raycast (see below) or Spotlight, per `flake.nix` |
-| `⌘ Tab` / `⌘ ⇧ Tab` | Switch **apps** |
+| `⌘ Tab` / `⌘ ⇧ Tab` | Switch **apps** (with AeroSpace: windows of the current workspace, see above) |
 | `` ⌘ ` `` | Cycle windows of the current app |
 | `⌘ W` | Close window / tab |
 | `⌘ Q` | Quit app (closing the last window does *not* quit) |

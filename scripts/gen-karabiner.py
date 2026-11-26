@@ -118,6 +118,23 @@ if args.window_manager == "aerospace":
             sys.exit(f"unmapped key {k}")
         if k not in keys:
             keys.append(k)
+    # ⌘Tab / ⌘⇧Tab cycle the windows of the CURRENT workspace only. The macOS app
+    # switcher lists apps from every workspace, and picking one jumps to its workspace.
+    # Order is the workspace's layout order (not most-recently-used); wraps around.
+    focus = ("/opt/homebrew/bin/aerospace focus --boundaries workspace "
+             "--boundaries-action wrap-around-the-workspace ")
+    rules.append({
+        "description": "Command + Tab -> cycle windows of the current AeroSpace workspace",
+        "manipulators": [
+            {"type": "basic",
+             "from": {"key_code": "tab", "modifiers": {"mandatory": ["command"]}},
+             "to": [{"shell_command": focus + "dfs-next"}]},
+            {"type": "basic",
+             "from": {"key_code": "tab", "modifiers": {"mandatory": ["command", "shift"]}},
+             "to": [{"shell_command": focus + "dfs-prev"}]},
+        ],
+    })
+
     # Appended last: Karabiner uses the first matching rule, and this one also
     # matches shift (e.g. ⌥⇧/ must open the cheatsheet, not ⌃⌥⇧/).
     rules.append({
