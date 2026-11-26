@@ -57,6 +57,9 @@
     # Pass home-manager's generated lua via a wrapper flag instead of writing
     # ~/.config/nvim/init.lua, which is ours (symlinked from config/nvim).
     sideloadInitLua = true;
-    plugins = [ pkgs.vimPlugins.nvim-treesitter.withAllGrammars ];
+    plugins = with pkgs.vimPlugins; [
+      nvim-treesitter.withAllGrammars
+      tokyonight-nvim # colorscheme matching Ghostty/tmux (Tokyo Night Moon)
+    ];
   };
 }

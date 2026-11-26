@@ -20,7 +20,10 @@ opt.undofile = true -- persistent undo across sessions
 opt.splitright = true
 opt.splitbelow = true
 
-vim.cmd.colorscheme("habamax")
+-- Tokyo Night Moon, same palette as Ghostty and tmux (plugin installed by Nix).
+if not pcall(vim.cmd.colorscheme, "tokyonight-moon") then
+  vim.cmd.colorscheme("habamax")
+end
 
 -- Treesitter highlighting (grammars are installed by Nix).
 vim.api.nvim_create_autocmd("FileType", {
@@ -45,3 +48,20 @@ map("n", "<C-h>", "<C-w>h")
 map("n", "<C-j>", "<C-w>j")
 map("n", "<C-k>", "<C-w>k")
 map("n", "<C-l>", "<C-w>l")
+
+-- macOS-style arrow navigation. Ghostty sends readline codes for these keys:
+-- ⌥←/⌥→ = Esc b / Esc f (seen by Neovim as <M-b>/<M-f>), ⌘←/⌘→ = Ctrl-A / Ctrl-E.
+map({ "n", "x", "o" }, "<M-b>", "b", { desc = "Word left" })
+map({ "n", "x", "o" }, "<M-f>", "w", { desc = "Word right" })
+map("i", "<M-b>", "<C-o>b", { desc = "Word left" })
+map("i", "<M-f>", "<C-o>w", { desc = "Word right" })
+map("c", "<M-b>", "<S-Left>", { desc = "Word left" })
+map("c", "<M-f>", "<S-Right>", { desc = "Word right" })
+map({ "n", "x", "o" }, "<C-a>", "^", { desc = "Line start" })
+map({ "n", "x", "o" }, "<C-e>", "$", { desc = "Line end" })
+map("i", "<C-a>", "<C-o>^", { desc = "Line start" })
+map("i", "<C-e>", "<End>", { desc = "Line end" })
+map("c", "<C-a>", "<Home>", { desc = "Line start" })
+-- Ctrl-A / Ctrl-X (increment / decrement number) moved to leader +/-.
+map({ "n", "x" }, "<leader>+", "<C-a>", { desc = "Increment number" })
+map({ "n", "x" }, "<leader>-", "<C-x>", { desc = "Decrement number" })
