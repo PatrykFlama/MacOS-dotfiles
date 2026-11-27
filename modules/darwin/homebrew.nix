@@ -47,6 +47,7 @@
       # "audacity"
       # "kdenlive"
       # "freecad"
+      "autodesk-fusion" # Fusion 360
       # "ultimaker-cura"
       # "arduino-ide"
       # "raspberry-pi-imager"
