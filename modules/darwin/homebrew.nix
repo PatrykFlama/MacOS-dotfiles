@@ -57,5 +57,8 @@
 
     # Mac App Store apps: requires being signed in to the App Store.
     masApps = {
+      # "Xcode" = 497799835;
+      "WireGuard" = 1451685025; # official client is App Store-only (no cask)
+    };
   };
 }
