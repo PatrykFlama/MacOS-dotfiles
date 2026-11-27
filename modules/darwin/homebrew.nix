@@ -56,6 +56,6 @@
     ];
 
     # Mac App Store apps: requires being signed in to the App Store.
-    # masApps = { "Xcode" = 497799835; };
+    masApps = {
   };
 }
