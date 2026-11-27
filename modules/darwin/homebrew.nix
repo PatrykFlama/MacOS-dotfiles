@@ -51,7 +51,7 @@
       # "arduino-ide"
       # "raspberry-pi-imager"
       # "anydesk"
-      # "ollama-app"
+      "ollama"
       # "steam"
     ];
 
